@@ -268,3 +268,7 @@
 .social-share .icon-wechat:hover .wechat-qrcode {
   display: block
 }
+
+.icon-linkedin .icon-facebook .icon-twitter .icon-google{
+  display: none
+}
