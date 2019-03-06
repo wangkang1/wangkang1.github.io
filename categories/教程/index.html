@@ -4,8 +4,8 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Bolg">
-    <meta name="description" content="Bolg">
+    <meta name="keywords" content="分类: 教程, Bolg">
+    <meta name="description" content="分类: 教程 | Bolg">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Bolg</title>
+    <title>分类: 教程 | Bolg</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -253,56 +253,9 @@
 
 </header>
 
-
-<style>
-    .carousel-control {
-        width: 45px;
-        height: 45px;
-        line-height: 55px;
-        border-radius: 45px;
-        background: transparent;
-        cursor: pointer;
-        z-index: 100;
-    }
-
-    #prev-cover {
-        position: absolute;
-        top: 48%;
-        left: 8px;
-    }
-
-    #next-cover {
-        position: absolute;
-        top: 48%;
-        right: 8px;;
-    }
-
-    #prev-cover i {
-        margin-right: 3px;
-    }
-
-    #next-cover i {
-        margin-left: 3px;
-    }
-
-    .carousel-control:hover {
-        background-color:rgba(0, 0, 0, .4);
-    }
-
-    .carousel-control i {
-        color: #fff;
-        font-size: 2.4rem;
-    }
-</style>
-
-
-
-<div class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
-    
-
-    <div class="carousel-item red white-text bg-cover about-cover">
-        <div class="container">
-            <div class="row">
+<div class="bg-cover pd-header about-cover">
+    <div class="container">
+    <div class="row">
     <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
         <div class="brand">
             <div class="title center-align">
@@ -323,169 +276,53 @@
 // 每天切换 banner 图.  Switch banner image every day.
 $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay() + '.jpg)');
 </script>
-
-            <div class="cover-btns">
-                <a href="#indexCard" class="waves-effect waves-light btn">
-                    <i class="fa fa-angle-double-down"></i>开始阅读
-                </a>
-
-                
-                <a href="https://wangkang1.github.io/" class="waves-effect waves-light btn" target="_blank">
-                    <i class="fa fa-github-alt"></i>Github
-                </a>
-                
-            </div>
-            <div class="cover-social-link">
-    <a href="https://github.com/wangkang1" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
-        <i class="fa fa-github"></i>
-    </a>
-
-
-
-    <a href="mailto:970778753@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
-        <i class="fa fa-envelope-open"></i>
-    </a>
-
-
-
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=970778753" class="tooltipped" data-tooltip="QQ联系我: 970778753" data-position="top" data-delay="50">
-        <i class="fa fa-qq"></i>
-    </a>
-
-
-</div>
-        </div>
     </div>
-
-    
 </div>
-
-<script>
-$(function () {
-    let coverSlider = $('.carousel');
-    coverSlider.carousel({
-        duration: Number('120'),
-        fullWidth: true,
-        indicators: 'true' === 'true'
-    });
-
-    let carouselIntervalId;
-    
-    // Loop to call the next cover article picture.
-    let autoCarousel = function() {
-        carouselIntervalId = setInterval(function () {
-            coverSlider.carousel('next');
-        }, 5000);
-    };
-    autoCarousel();
-    
-
-    let restartPlay = function () {
-        
-        clearInterval(carouselIntervalId);
-        autoCarousel();
-        
-    };
-
-    
-    // prev and next cover post.
-    $('#prev-cover').click(function () {
-        coverSlider.carousel('prev');
-        restartPlay();
-    });
-    $('#next-cover').click(function () {
-        coverSlider.carousel('next');
-        restartPlay();
-    });
-    
-});
-</script>
-
-
 
 <main class="content">
 
     
-    <div id="indexCard" class="index-card">
-        <div class="container ">
-            <div class="card">
-                <div class="card-content">
-                    
-                        <div class="dream">
-    
-    <div class="title center-align">
-        <i class="fa fa-lightbulb-o"></i>&nbsp;&nbsp;路漫漫
-    </div>
-    
-    <div class="row">
-        <div class="col l8 offset-l2 m10 offset-m1 s10 offset-s1 center-align text">
-            一艘没有航行目标的船,任何方向的风都是逆风"。
-        </div>
-    </div>
-</div>
-                    
 
-                    
-                        
-
-<link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
-<div class="music-player">
-    
-    <div class="title center-align">
-        <i class="fa fa-music"></i>&nbsp;&nbsp;听听音乐
-    </div>
-    
-    <div class="row">
-        <div class="col l8 offset-l2 m10 offset-m1 s12">
-            <div id="aplayer" class="music"></div>
-        </div>
-    </div>
-</div>
-
-<script src="/libs/aplayer/APlayer.min.js"></script>
-<script>
-$(function () {
-    new APlayer({
-        container: document.getElementById('aplayer'),
-        fixed: 'false' === 'true',
-        autoplay: 'true' === 'true',
-        theme: '#42b983',
-        loop: 'all',
-        order: 'list',
-        preload: 'auto',
-        volume: Number('0.7'),
-        listFolded: 'false' === 'true',
-        listMaxHeight: '',
-        audio: JSON.parse('[{"name":"五月雨变奏电音","artist":"AnimeVibe","url":"http://static.blinkfox.com/music1.mp3","cover":"http://static.blinkfox.com/music-cover1.png"},{"name":"Take me hand","artist":"DAISHI DANCE,Cecile Corbel","url":"http://static.blinkfox.com/music2.mp3","cover":"http://static.blinkfox.com/music-cover2.png"},{"name":"Shape of You","artist":"J.Fla","url":"http://static.blinkfox.com/music3.mp3","cover":"http://static.blinkfox.com/music-cover3.png"}]')
-    });
-});
-</script>
-                    
-
-                    
-
-                    <div id="recommend-sections" class="recommend">
-                        
-
-
-
-                    </div>
-                </div>
+<div id="category-cloud" class="container chip-container">
+    <div class="card">
+        <div class="card-content">
+            <div class="tag-title center-align">
+                <i class="fa fa-bookmark"></i>&nbsp;&nbsp;文章分类
+            </div>
+            <div class="tag-chips">
+                
+                
+                
+                <a href="/categories/Diary/" title="Diary: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default " style="background-color: #F9EBEA;">Diary
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/教程/" title="教程: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-active " style="background-color: #F5EEF8;">教程
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
             </div>
         </div>
     </div>
-    
+</div>
 
     
 
-    <!-- 所有文章卡片 -->
     <article id="articles" class="container articles">
-        <div class="row article-row">
+        <div class="row tags-posts">
             
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
                     <a href="/2019/03/06/markdown/">
-                        <div class="card-image">
+                        <div class="card-image tag-image">
                             
                             
                             <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="Markdown 编辑器使用手册">
@@ -493,7 +330,6 @@ $(function () {
                             <span class="card-title">Markdown 编辑器使用手册</span>
                         </div>
                     </a>
-
                     <div class="card-content article-content">
                         <div class="summary">
                             
@@ -529,62 +365,9 @@ $(function () {
                 </div>
             </div>
             
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2019/03/05/hello-world/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                            
-                            <span class="card-title">Hello World</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary">
-                            
-                                Welcome to Hexo! This is your very first post. Check documentation for
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-03-05
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fa fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Diary/" class="post-category" target="_blank">
-                                    Diary
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/start/" target="_blank">
-                            <span class="chip bg-color">start</span>
-                        </a>
-                        
-                        <a href="/tags/hello/" target="_blank">
-                            <span class="chip bg-color">hello</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
         </div>
     </article>
-
 </main>
-
 
 
 <footer class="page-footer bg-color">
