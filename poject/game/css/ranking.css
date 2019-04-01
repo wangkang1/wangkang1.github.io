@@ -1,0 +1,96 @@
+.ranking {
+  margin: 200px 40px 0;
+  display: flex;
+ }
+ .ranking .ranking_list{
+ flex: 1;
+ background: url('../img/ranking.png') no-repeat;
+ background-size:contain;
+ height: 595px;
+ text-align: center
+ }
+ .ranking .ranking_list .answerb{
+  margin-top: -15px;
+ }
+ .ranking .entry{
+  height: 350px;
+  overflow-y: auto;
+  margin: 90px 120px 0 80px;
+ }
+ .ranking .entry li{
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 15px;
+   color: #7b2b00;
+   font-size: 16px
+ }
+ .first{
+  font-family: "HYZhuZiChaoRanTiW";
+	font-size: 24px;
+	color: #ef5440;
+ }
+
+ .second{
+  font-family: "HYZhuZiChaoRanTiW";
+	font-size: 24px;
+	color: #ee9f1e; 
+ }
+
+ .third{
+  font-family: "HYZhuZiChaoRanTiW";
+	font-size: 24px;
+  color: #54e360;
+
+ }
+ .mranking{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 120px 0 80px;
+  color: #b50000;
+  font-size: 16px;
+ 
+}
+ .btn {
+   text-align: center;
+   margin-top: 70px;
+ }
+ .ranking    .index{
+  margin-right: 10px;
+  text-align: center;
+  width: 30px;
+  display: inline-block
+ }
+ .btn  .back_btn{
+   background: url('../img/back.png') no-repeat;
+   width: 308px;
+   height: 88px;
+   cursor: pointer;
+   outline: none;
+   border:none
+ }
+ /* 解决分辨率问题 */
+ @media screen and (max-width: 1600px) {
+
+  .ranking .entry {
+    height: 280px;
+    margin-top: 60px;
+
+  }
+ .mranking{
+   margin-top: 5px;
+ }
+ .btn{
+   margin-top: -80px;
+ }
+}
+@media screen and (max-width: 1500px) {
+
+  .ranking .entry {
+    height: 250px;
+    margin-top: 40px;
+
+  }
+ .btn{
+   margin-top: -120px;
+ }
+}

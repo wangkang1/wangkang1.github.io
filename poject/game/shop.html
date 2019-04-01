@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>保密游戏</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/top.css">
+  <link rel="stylesheet" href="./css/shop.css">
+</head>
+
+<body>
+  <div id="midground" class="wall"></div>
+  <div id="foreground" class="wall"></div>
+  <div class="top">
+    <a href="./mode.html" class="lojump">
+      <div class="logo"></div>
+    </a>
+    <div class="nav">
+      <ul>
+        <li><a href="javascript:"><img src="./img/prop.png" alt=""></a></li>
+        <li><a href="./ranking.html"><img src="./img/seniority.png" alt=""></a></li>
+        <li><a href="./install.html"><img src="./img/set.png" alt=""></a></li>
+    </div>
+    <div class="info">
+      <div class="role">
+        <div class="role_info">
+          <div class="identity">
+              <a href="./userinfo.html"><img src="./img/role.png" alt="" class="rolg_img"></a>
+            <div class="wrap">
+              <div class="name">用户1<span style="margin-left:8px">LV<span class="counter" style="margin-left:5px">13</span></span></div>
+              <div class="title">游戏称号</div>
+              <div class="progress">
+                <p class="mprocess"></p>
+              </div>
+            </div>
+          </div>
+          <div class="gold">
+            <img src="./img/gold.png" alt="" class="gold_img">
+            <span class="gold_tit">金币</span>
+            <span class="counter gold_num">12589</span>
+          </div>
+        </div>
+        <div class="quit">
+          <a href="./login.html">
+            <span>退出</span>
+            <img src="./img/quit.png" alt="">
+          </a>
+        </div>
+      </div>
+      <div class="task">
+        <ul class="card">
+          <li>
+            <img class=“task_img” src="./img/answer.png" alt="">
+            <span class="task_name">答题卡</span>
+            <span class="num counter">12</span>
+            <a href="javascript:"> <img src="./img/ladd.png" alt="" class="add_img"></a>
+          </li>
+          <li>
+            <img class=“task_img” src="./img/exclude.png" alt="">
+            <span class="task_name taskc">排除卡</span>
+            <span class="num counter taskc">12</span>
+
+            <a href="javascript:"><img src="./img/add.png" alt="" class="add_img"></a>
+          </li>
+        </ul>
+        <div class="tips">
+          <ul>
+            <li>
+              <span class="duty">任务</span>
+              <div class="circle"></div>
+              <div class="hwrap">
+                <img src="./img/tips.png" alt="" class="tips_img">
+
+                <ul class="duty_center">
+                  <li class="arr">
+                    <div class="arrow">
+                      <em></em><span></span>
+                    </div>
+                  </li>
+                  <li name="0"><span class="award">使用一次道具</span></li>
+                  <li name="0"><span class="award">使用三次道具</span></li>
+                  <li name="0"><span class="award">赢得一场对战</span></li>
+                  <li name="1"><span class="award">连续赢得两场对战</span></li>
+                  <li name="1"><span class="award">成功进阶1级</span></li>
+                  <li name="0"><span class="award">使用二次道具</span></li>
+                </ul>
+
+            </li>
+          </ul>
+          <div class="shade">
+            <div class="shade_title">奖励：</div>
+            <ul>
+              <li>经验*<span>320</span></li>
+              <li>金币*<span>600</span> </li>
+              <li></li>答题卡*<span>1</span> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- 主体部分 -->
+  <div class="shop">
+    <img src="./img/shopmall.png" alt="" class="shopmall">
+    <div class="title">
+      <p class="mtitle">对战道具卡</p>
+      <p class="ltitle">道具卡仅能在<span>对战模式</span>下使用</p>
+    </div>
+    <div class="tline"></div>
+    <ul class="shop_list">
+      <li>
+        <div class="list_img">
+          <img src="./img/dati.png" alt="">
+        </div>
+        <div class="list_info">
+          <h2>答题卡</h2>
+          <div class="list_infom">
+            <p>显示出正确答案</p>
+            <p>售价：<span class="golds">800</span>金币</p>
+          </div>
+        </div>
+        <div class="list_price">
+          <div class="price">
+            <span class="total">0</span>
+            <img src="./img/money.png" alt="" height="16">
+          </div>
+          <div class="buy">
+            <img src="./img/reduce.png" alt="" class="buy_reduce">
+            <p class="buy_num">0</p>
+            <img src="./img/add.png" alt="" class="buy_add">
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="list_img">
+          <img src="./img/paic.png" alt="">
+        </div>
+        <div class="list_info">
+          <h2>排除卡</h2>
+          <div class="list_infom">
+            <p>去掉一个错误答案</p>
+            <p>售价：<span class="golds">600</span>金币</p>
+          </div>
+        </div>
+        <div class="list_price">
+          <div class="price">
+            <span class="total">0</span>
+            <img src="./img/money.png" alt="" height="16">
+          </div>
+          <div class="buy">
+            <img src="./img/reduce.png" alt="" class="buy_reduce">
+            <p class="buy_num">0</p>
+            <img src="./img/add.png" alt="" class="buy_add">
+          </div>
+        </div>
+      </li>
+
+    </ul>
+    <div class="btn_list">
+      <button class="buy_btn"></button>
+      <button class="back_btn"></button>
+    </div>
+  </div>
+
+  <!-- 购买道具弹窗 -->
+  <div class="alert">
+    <div class="layc-alert">
+      <h2>购买道具</h2>
+      <p class="atitle">是否确认购买道具？</p>
+       <p class="all">共需消费<span class="sum"></span>金币</p>
+      <div class="alert_btn">
+        <button class="rbuy"></button>
+        <button class="renounce"></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  <script src="./js/jquery.countup.min.js"></script>
+  <script src="./js/jquery.waypoints.min.js"></script>
+  <script src="./js/alert.js"></script>
+  <script src="./js/top.js"></script>
+  <script>
+    var  sum=0; //定义总额
+    //添加数量价格计算
+    $('.buy_add').click(function () {
+      var index = $(".buy_add").index(this);
+      var buynum = $('.buy_num').eq(index).text() | 0 //购买数量
+      var gold = $('.golds').eq(index).text() | 0 //购买单价
+      $('.buy_num').eq(index).text(buynum + 1)
+      $('.total').eq(index).text($('.buy_num').eq(index).text() * gold)
+    })
+
+    //减少数量价格计算
+    $('.buy_reduce').click(function () {
+      var index = $(".buy_reduce").index(this);
+      var buynum = $('.buy_num').eq(index).text() | 0 //购买数量
+      var gold = $('.golds').eq(index).text() | 0 //购买单价
+      $('.buy_num').eq(index).text(buynum - 1)
+      if ($('.buy_num').eq(index).text() < 0) {
+        $('.buy_num').eq(index).text(0)
+      }
+      $('.total').eq(index).text($('.buy_num').eq(index).text() * gold)
+    })
+
+    // 点击返回
+    $('.back_btn').click(function () {
+      window.location = './home.html'
+    })
+    //点击购买道具
+    $('.buy_btn').click(function () {
+        sum=0
+        $('.total').each(function(index){
+          sum+=$('.total').eq(index).text()|0
+        })
+        if(sum==0){
+
+        }
+      $('.sum').text(sum)
+       $('.alert').show()
+    })
+
+    //放弃购买
+    $('.renounce').click(function () {
+      $('.alert').hide()
+    })
+
+    //确认购买
+    $('.rbuy').click(function () {
+      if(sum==0){
+        alerts({
+          title: '购买道具',
+          content: '请选择需要购买的商品！',
+        })
+      }
+      else if (sum>0) {
+        $('.buy_num').text(0)
+        $('.total').text(0)
+        alerts({
+          title: '购买道具',
+          content: '道具购买成功！',
+        })
+      
+      } else {
+        //道具购买失败
+        alerts({
+          title: '购买道具',
+          content: '道具购买失败！',
+          btn: true
+        })
+        $('.buy_num').text(0)
+        $('.total').text(0)
+      }
+      $('.alert').hide()
+    })
+  </script>
+</body>
+
+</html>

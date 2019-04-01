@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>保密游戏</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/answer.css">
+  <link rel="stylesheet" href="./css/animate.min.css">
+</head>
+<script>
+// console.log(window.name)
+//   if(window.name='3' && window.sessionStorage.getItem('fush')){
+  
+//  }
+
+  // 页面刷新暂存定时和进度条状态
+    window.onbeforeunload = function (e) {
+      e = e || window.event;
+//       var n = e.screenX - window.screenLeft;
+// var b = n > document.documentElement.scrollWidth-20;
+// if(b && e.clientY < 0 || e.altKey)
+// {  window.name='2'
+// e.returnValue = '页面关闭'; //这里可以放置你想做的操作代码
+// }else
+// { window.name='3'
+//    window.sessionStorage.setItem('fush',true)
+//    e.returnValue = '页面刷新'
+// }    
+     
+     
+      if (e) {
+        if (localStorage.getItem("timers")) {
+          localStorage.setItem('timers', $('.timing').text())
+          $('.progress').css("left", localStorage.getItem('lnums'))
+          $('.progress').css("width", localStorage.getItem('lnum'))
+        } else {
+          $('.timing').text(40);
+          $('.progress').css("left", "705px")
+          $('.progress').css("width", 0)
+        }
+      }
+    };
+
+
+</script>
+
+<body>
+  <audio loop="loop" id="music" autoplay>
+    <source src="./mp3/Wild Child - Crazy Bird.mp3"></audio>
+  <div class="logo"></div>
+  <div class="flex">
+    <div class="answer">
+      <div class="cout">
+        <span class="timing"></span>
+        <i>s</i>
+      </div>
+      <div class="rate">
+        <img src="./img/wait.png" alt="" class="wait" style="margin-left:10px">
+        <div class="rate_img">
+          <div class="progress"></div>
+        </div>
+      </div>
+
+      <div class="answer_box">
+        <div class="answer_tit"></div>
+        <div class="answer_top">
+          <span><strong>第<i class="current">1</i></strong>/20关</span>
+        </div>
+        <div class="line"></div>
+
+        <div class="wrap">
+          <div class="wrap_box">
+            <p class="answer_c">
+              故意泄露绝密级( )件、机密级( )件或秘密级( )件的，应予立案。
+            </p>
+            <div class="change">
+
+              <from id="yigeform" action="">
+                <div class="change_list">
+                  <input name="0" type="radio" value="0" /><label>A. 1,2,3 </label>
+                  <img src="" alt="" class="judge">
+                </div>
+                <div class="change_list">
+                  <input name="0" type="radio" value="1" /><label>B. 1,1,3 </label>
+                  <img src="" alt="" class="judge">
+                </div>
+                <div class="change_list">
+                  <input name="0" type="radio" value="2" /><label>C. 1,2,2 </label>
+                  <img src="" alt="" class="judge">
+                </div>
+                <div class="change_list">
+                  <input name="0" type="radio" value="3" /><label>D. 2,2,3 </label>
+                  <img src="" alt="" class="judge">
+                </div>
+                <img src="" alt="" class="result">
+                <!-- <button class="sure_btn"></button>  -->
+                <button class="wait_btn">等待对方答题(<span>4</span>)</button>
+              </from>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="vs">
+        <img src="./img/role.png" alt="" class="role">
+        <img src="./img/vs.png" alt="">
+        <img src="./img/roles.png" alt="" class="role">
+      </div>
+      <p class="use">使用道具</p>
+      <ul class="property">
+        <li>
+          <button class="acard">
+            <img src="./img/dati.png" alt="">
+            <span>
+              答题卡
+              <i>12</i>
+            </span>
+          </button>
+        </li>
+        <li>
+          <button class="pcard">
+            <img src="./img/paic.png" alt="">
+            <span class="debar">
+              排除卡
+              <i>12</i>
+            </span>
+          </button>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+  <div class="leaved">
+    <button class="leaved_btn"></button>
+  </div>
+
+
+  <!-- 练习对话框 -->
+  <div id="modal" class="modal">
+    <div class="modal-dialog animated">
+      <div class="lxover"></div>
+      <img src="./img/role.png" alt="" class="romo">
+      <img src="./img/vsok.png" alt="" class="dzimg">
+      <p class="role_name">用户p1</p>
+      <div class="rolejd">
+        <span>LV.<i class="counter">13</i></span>
+        <div class="dules">
+          <p class="mprocess"></p>
+        </div>
+      </div>
+      <div class="oline"></div>
+      <ul class="mlist">
+        <li><span>正确数量：</span><i class="counter">18</i></li>
+        <li><span>准确率：</span>
+          <p><i class="counter">80</i>%</p>
+        </li>
+        <li><span>获得经验：</span><i class="counter">320</i></li>
+      </ul>
+      <div class="mbtn">
+        <button class="again"></button>
+        <button class="leave"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 使用道具弹窗 -->
+  <div class="alert">
+    <div class="layc-alert">
+      <h2>使用道具</h2>
+      <p class="atitle">是否确认使用道具？</p>
+      <div class="alert_btn">
+        <button class="asure"></button>
+        <button class="renounce"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 退出游戏模式弹窗 -->
+  <div class="alerts">
+    <div class="layc-alert">
+      <h2>提示</h2>
+      <p class="atitle amode"></p>
+      <div class="alert_btn">
+        <button class="asures"></button>
+        <button class="renounces"></button>
+      </div>
+    </div>
+  </div>
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  <script src="./js/jquery.countup.min.js"></script>
+  <script src="./js/jquery.waypoints.min.js"></script>
+  <script src="./js/modal.js"></script>
+  <script src="./js/alert.js"></script>
+  <script>
+    var state = true //模式状态
+    // 离开
+    $('.leaved_btn').click(function () {
+      //  练习模式离开
+      if (localStorage.getItem('mode') == 0) {
+        $('.amode').text('中途退出练习模式，将无法获取游戏奖励，是否确认退出。')
+        $('.alerts').show()
+      } else if (localStorage.getItem('mode') == 1) { //对战模式离开
+        $('.amode').text('中途退出对战模式，对战直接失败，并且将无法获取游戏奖励，是否确认退出。')
+        $('.alerts').show()
+      } else { //进阶模式离开
+        $('.amode').text('中途退出进阶模式，将无法获取游戏奖励，是否确认退出。')
+        $('.alerts').show()
+      }
+    })
+    // 取消离开
+    $('.renounces').click(function () {
+      $('.alerts').hide()
+      state = true
+    })
+    //确认离开
+    $('.asures').click(function () {
+      if (localStorage.getItem('mode') == 1) {
+        $('.alerts').hide()
+        $('.dzimg').attr('src', './img/lose.png')
+        state = false
+        modal.open();
+      } else {
+        window.location = './mode.html'
+      }
+
+    })
+    // 背景音乐状态控制
+    if (localStorage.getItem('control') == "false") {
+      $('#music')[0].autoplay = false
+    } else {
+      $('#music')[0].autoplay = true
+    }
+
+    $('.counter').countUp(); //数字动态变化插件
+    // 答题时禁止浏览器后退
+    $(function () {
+      if (window.history && window.history.pushState) {
+        $(window).on('popstate', function () {
+          window.history.pushState('forward', null, '#');
+          window.history.forward(1);
+        });
+      }
+      window.history.pushState('forward', null, '#');
+      window.history.forward(1);
+    })
+
+
+
+    // 模式显示
+    var mode = localStorage.getItem('mode');
+    if (mode == 0) {
+      $(".answer_tit").css("background-image", "url(./img/lx.png)")
+    } else if (mode == 1) {
+      $(".answer_tit").css("background-image", "url(./img/dz.png)")
+      $(".lxover").css("background-image", "url(./img/dzover.png)")
+      $('.card').show()
+      $('.dzimg').show()
+      $('.again').hide()
+    } else {
+      $(".answer_tit").css("background-image", "url(./img/jinj.png)")
+    }
+
+
+
+
+
+    //定时器和进度条逻辑
+    var choice = ""
+    var index = ""
+    var states = false;
+    $('.timing').text(localStorage.getItem("timers"))
+    $('.progress').css("left", localStorage.getItem('lnums'))
+    $('.progress').css("width", localStorage.getItem('lnum'))
+
+    var timer = setInterval(function () {
+      count()
+    }, 1000);
+    var count = function () {
+      var nums = $('.progress').position().left - 17.6 + "px";
+      var num = $('.progress').width() + 17.6;
+      $('.sure_btn').attr("disabled", false);
+      $('.timing').text($('.timing').text() - 1);
+      $('.progress').css("left", nums)
+      $('.progress').css("width", num)
+      if ($('.timing').text() < 10) {
+        $('.timing').addClass('danger')
+        $('.cout i').addClass('danger')
+      }
+      if ($('.timing').text() < 1) {
+        if (states) {
+          $('.current').text($('.current').text() - 0 + 1);
+        }
+        states = true
+        $('.progress').css("left", "705px")
+        $('.progress').css("width", 0)
+        $('.sure_btn').attr("disabled", true);
+        $('.timing').removeClass('danger')
+        $('.cout i').removeClass('danger')
+        $('.timing').text(40);
+        localStorage.removeItem('timers')
+        localStorage.removeItem('lnums')
+        localStorage.removeItem('lnum')
+        return
+      }
+
+      if ($('.timing').text() == 39 && $('.current').text() == 21) {
+        modal.open();
+        $('.current').text(20)
+        $('.progress').css("width", 0)
+        clearInterval(timer);
+      }
+      localStorage.setItem('timers', $('.timing').text())
+      localStorage.setItem('lnums', nums)
+      localStorage.setItem('lnum', num)
+    }
+    // 选择答案
+    $('.change_list input').change(function () {
+      choice = $(this).val();
+      index = $('.change_list input').index()
+    })
+
+    //提交答案
+    $('.sure_btn').click(function () {
+      $(this).attr('disabled', true);
+      if (!choice) {
+        alerts({
+          title: '提示',
+          content: '请先选择答案！',
+        })
+      } else if (true) {
+        //回答正确判断
+        $('.judge').eq(index).attr("src", "./img/surea.png")
+        $('.result').attr("src", "./img/true.png")
+        if ($('.current').text() == 20) {
+          modal.open();
+          return
+        } else {
+          clearInterval(timer)
+          setTimeout(function () {
+            timer = setInterval(function () {
+              count();
+            }, 1000);
+            $('.result').attr("src", "")
+            $('.judge').each(function (ind) {
+              $('.judge').eq(ind).attr("src", "")
+            });
+            $(this).attr('disabled', false);
+            $('.progress').css("left", "705px")
+            $('.progress').css("width", 0)
+            $('.timing').text(40);
+            $('.current').text($('.current').text() - 0 + 1);
+          }, 3000)
+
+        }
+      }
+      //回答错误判断
+      else {
+        $('.judge').eq(index).attr("src", "./img/falsea.png")
+        $('.judge').eq(index + 1).attr("src", "./img/surea.png")
+        $('.result').attr("src", "./img/false.png")
+        $('this').attr('disabled', true);
+        if ($('.current').text() == 20) {
+          modal.open();
+          return
+        } else {
+          clearInterval(timer)
+          setTimeout(function () {
+            timer = setInterval(function () {
+              count();
+            }, 1000);
+            $('.result').attr("src", "")
+            $('.judge').each(function (ind) {
+              $('.judge').eq(ind).attr("src", "")
+            });
+            $('this').attr('disabled', false);
+            $('.progress').css("left", "705px")
+            $('.progress').css("width", 0)
+            $('.timing').text(40);
+            $('.current').text($('.current').text() - 0 + 1);
+          }, 3000)
+
+        }
+      }
+
+      $('.timing').removeClass('danger')
+      $('.cout i').removeClass('danger')
+
+    })
+
+    var jiny = 160 //当前经验
+    var zjiny = 1860 //总经验
+    //弹框经验进度条逻辑
+    if (jiny / zjiny == 1) {
+      $(".mprocess").css("width", 0)
+      // 要升一级
+    } else {
+      $(".mprocess").css("width", 184 - jiny / zjiny * 184)
+      $(".mprocess").css("left", jiny / zjiny * 184 + "px")
+    }
+
+    // 重新开始
+    $('.again').click(function () {
+      modal.close()
+      window.location.reload()
+    })
+    // 离开
+    $('.leave').click(function () {
+      modal.close()
+      if (state == false) {
+        window.location = './mode.html'
+      } else {
+        window.location = './home.html'
+      }
+
+    })
+    // 对战模式挑战失败显示失败页面
+    // $('.dzimg').attr('src','./img/lose.png');
+
+    var modal = new RModal(document.getElementById('modal'), {});
+    document.addEventListener('keydown', function (ev) {
+      modal.keydown(ev);
+    }, false);
+
+    window.modal = modal;
+
+    //对战模式下使用道具
+
+    var instate = "" //判定使用什么道具
+    $('.property li button').click(function () {
+      instate = $('.property li button').index(this)
+      $('.alert').show()
+    })
+
+    //确认使用道具
+    var err = -1
+    $('.asure').click(function () {
+      // instate==0是使用答题卡
+      if (instate == 0) {
+        if ($('.acard i').text() < 1) {
+          alerts({
+            title: '提示',
+            content: '答题卡数量不足',
+          })
+          $('.alert').hide()
+          return
+        }
+        //使用答题卡
+        $('.acard').attr('disabled', true);
+        $('.pcard').attr('disabled', true);
+        $('.judge').eq(index).attr("src", "./img/surea.png")
+        $('.result').attr("src", "./img/true.png")
+        $('.sure_btn').attr('disabled', true);
+        if ($('.current').text() == 20) {
+          modal.open();
+          $('.alert').hide()
+          return
+        } else {
+          clearInterval(timer)
+          setTimeout(function () {
+            timer = setInterval(function () {
+              count();
+            }, 1000);
+            $('.result').attr("src", "")
+            $('.judge').each(function (ind) {
+              $('.judge').eq(ind).attr("src", "")
+            });
+            $('.pcard').attr('disabled', false);
+            $('.acard').attr('disabled', false);
+            $('.sure_btn').attr('disabled', false);
+            $('.progress').css("left", "705px")
+            $('.progress').css("width", 0)
+            $('.timing').text(40);
+            $('.current').text($('.current').text() - 0 + 1);
+            if (err > -1) {
+              err = -1
+            }
+          }, 3000)
+
+        }
+        $('.acard i').text($('.acard i').text() - 1)
+      } else { //使用排除卡
+        if ($('.pcard i').text() < 1) {
+          alerts({
+            title: '提示',
+            content: '排除卡数量不足',
+          })
+          $('.alert').hide()
+          return
+        }
+        $('.result').attr("src", "")
+        err += 1
+        if (err < 2) {
+          $('.judge').eq(err).attr("src", "./img/falsea.png")
+        }
+        if ($('.current').text() == 20) {
+          modal.open();
+          $('.alert').hide();
+        }
+        if (err == 2) {
+          clearInterval(timer)
+          $('.pcard').attr('disabled', true);
+          $('.sure_btn').attr('disabled', true);
+          $('.judge').eq(2).attr("src", "./img/falsea.png")
+          $('.judge').eq(3).attr("src", "./img/surea.png")
+          setTimeout(function () {
+            timer = setInterval(function () {
+              count();
+            }, 1000);
+            $('.progress').css("left", "705px")
+            $('.progress').css("width", 0)
+            $('.current').text($('.current').text() - 0 + 1);
+            $('.timing').text(40);
+            $('.judge').each(function (ind) {
+              $('.judge').eq(ind).attr("src", "")
+            });
+            $('.sure_btn').attr('disabled', false);
+            $('.pcard').attr('disabled', false);
+            err = -1
+          }, 3000)
+
+        }
+        $('.pcard i').text($('.pcard i').text() - 1)
+      }
+      $('.timing').removeClass('danger')
+      $('.cout i').removeClass('danger')
+      $('.alert').hide()
+    })
+    // 放弃使用
+    $('.renounce').click(function () {
+      $('.alert').hide()
+    })
+  </script>
+</body>
+
+</html>

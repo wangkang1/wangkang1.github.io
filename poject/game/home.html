@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>保密游戏</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/top.css">
+  <link rel="stylesheet" href="./css/home.css">
+
+</head>
+
+<body>
+  <div id="midground" class="wall"></div>
+  <div id="foreground" class="wall"></div>
+  <audio loop="loop" id="music" autoplay>
+    <source src="./mp3/Wild Child - Crazy Bird.mp3">
+  </audio>
+  <div class="top">
+    <a href="./mode.html" class="lojump">
+      <div class="logo"></div>
+    </a>
+    <div class="nav">
+      <ul>
+        <li><a href="./shop.html"><img src="./img/prop.png" alt=""></a></li>
+        <li><a href="./ranking.html"><img src="./img/seniority.png" alt=""></a></li>
+        <li><a href="./install.html"><img src="./img/set.png" alt=""></a></li>
+    </div>
+    <div class="info">
+      <div class="role">
+        <div class="role_info">
+          <div class="identity">
+            <a href="./userinfo.html"><img src="./img/role.png" alt="" class="rolg_img"></a>
+            <div class="wrap">
+              <div class="name">用户1<span style="margin-left:8px">LV<span class="counter" style="margin-left:5px">13</span></span></div>
+              <div class="title">游戏称号</div>
+              <div class="progress">
+                <p class="mprocess"></p>
+              </div>
+            </div>
+          </div>
+          <div class="gold">
+            <img src="./img/gold.png" alt="" class="gold_img">
+            <span class="gold_tit">金币</span>
+            <span class="counter gold_num">12589</span>
+          </div>
+        </div>
+        <div class="quit">
+          <a href="./login.html">
+            <span>退出</span>
+            <img src="./img/quit.png" alt="">
+          </a>
+        </div>
+      </div>
+      <div class="task">
+        <ul class="card">
+          <li>
+            <img class=“task_img” src="./img/answer.png" alt="">
+            <span class="task_name">答题卡</span>
+            <span class="num counter">12</span>
+            <a href="./shop.html"> <img src="./img/ladd.png" alt="" class="add_img"></a>
+          </li>
+          <li>
+            <img class=“task_img” src="./img/exclude.png" alt="">
+            <span class="task_name taskc">排除卡</span>
+            <span class="num counter taskc">12</span>
+            <a href="./shop.html"><img src="./img/add.png" alt="" class="add_img"></a>
+          </li>
+        </ul>
+        <div class="tips">
+          <ul>
+            <li>
+              <span class="duty">任务</span>
+              <div class="circle"></div>
+              <div class="hwrap">
+                <img src="./img/tips.png" alt="" class="tips_img">
+
+                <ul class="duty_center">
+                  <li class="arr">
+                    <div class="arrow">
+                      <em></em><span></span>
+                    </div>
+                  </li>
+                  <li name="0"><span class="award">使用一次道具</span></li>
+                  <li name="0"><span class="award">使用三次道具</span></li>
+                  <li name="0"><span class="award">赢得一场对战</span></li>
+                  <li name="1"><span class="award">连续赢得两场对战</span></li>
+                  <li name="1"><span class="award">成功进阶1级</span></li>
+                  <li name="0"><span class="award">使用二次道具</span></li>
+                </ul>
+
+            </li>
+          </ul>
+          <div class="shade">
+            <div class="shade_title">奖励：</div>
+            <ul>
+              <li>经验*<span>320</span></li>
+              <li>金币*<span>600</span> </li>
+              <li></li>答题卡*<span>1</span> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content ">
+    <div class="content_l">
+      <div class="btn-list">
+        <button class="exercise"></button>
+        <button class="fight"></button>
+        <button class="advanced"></button>
+      </div>
+      <!-- 匹配模式页面 -->
+      <div class="marry">
+        <img src="./img/role.png" alt="" class="marryr">
+        <div class="spinner">
+          <div class="rect1"></div>
+          <div class="rect2"></div>
+          <div class="rect3"></div>
+          <div class="rect4"></div>
+          <div class="rect5"></div>
+        </div>
+        <img src="./img/who.png" alt="">
+        <p class="pipei">匹配中<span id="time"></span></p>
+        <p class="waitd">请耐心等待匹配结果</p>
+        <button class="rmarry back_marry"></button>
+      </div>
+      <!-- 匹配成功页面 -->
+      <div class="cmarry">
+        <img src="./img/role.png" alt="" class="cmarryr rolem">
+        <img src="./img/vs.png" alt="" class="vs">
+        <img src="./img/roles.png " alt="" class="rolem">
+        <p class="cpip">匹配成功</p>
+        <button class="jsmarry"></button>
+        <button class="crmarry back_marry"></button>
+      </div>
+
+      <!-- 等待对方确认 -->
+      <div class="cmarry wait">
+        <img src="./img/role.png" alt="" class="cmarryr rolem">
+        <img src="./img/vs.png" alt="" class="vs">
+        <img src="./img/roles.png " alt="" class="rolem">
+        <p class="cpip">等待对方确认...</p>
+        <span id="wtime"></span>
+      </div>
+      <div class="news">
+        <div class="news_l">
+          <div class="newslw">
+            <ul class="newsl_nav">
+              <li class="active cut">通知公告</li>
+              <li class="cut">资料下载</li>
+              <li class="cut">办事指南</li>
+              <li class="navlast"><a href="" class="more">更多+</a></li>
+            </ul>
+            <div class="switch">
+              <!-- 通知公告 -->
+              <ul class="act">
+                <li><a href="">涉密信息系统集成资质单位保密管理工作座谈会通知</a></li>
+                <li><a href="">涉密信息系统集成资质单位保密管理工作座谈会通知99999999999999999999999999999999999999999999999999999999999999999999999999999999</a></li>
+                <li><a href="">涉密信息系统集成资质单位保密管理工作座谈会通知</a></li>
+                <li><a href="">涉密信息系统集成资质单位保密管理工作座谈会通知</a></li>
+                <li><a href="">涉密信息系统集成资质单位保密管理工作座谈会通知99999999999999999999999999999999999999999999999999999999999999999999999999999999</a></li>
+                <li><a href="">涉密信息系统集成资质单位保密管理工作座谈会通知</a></li>
+                <li><a href="">涉密信息系统集成资质单位保密管理工作座谈会通知</a></li>
+              </ul>
+              <!-- 资料下载 -->
+              <ul>
+                <li><a href="">资料下载涉密信息系统集成资质单位保密管理工作座谈会通知</a></li>
+                <li><a href="">资料下载涉密信息系统集成资质单位保密管理工作座谈会通知99999999999999999999999999999999999999999999999999999999999999999999999999999999</a></li>
+                <li><a href="">资料下载涉密信息系统集成资质单位保密管理工作座谈会通知</a></li>
+              </ul>
+              <!-- 办事指南 -->
+              <ul>
+                <li><a href="">办事指南涉密信息系统集成资质单位保密管理工作座谈会通知</a></li>
+                <li><a href="">办事指南涉密信息系统集成资质单位保密管理工作座谈会通知99999999999999999999999999999999999999999999999999999999999999999999999999999999</a></li>
+                <li><a href="">办事指南涉密信息系统集成资质单位保密管理工作座谈会通知</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="news_r">
+          <div class="newslws">
+            <ul class="newsl_navs">
+              <li class="actives cuts">保密知识</li>
+              <li class="cuts">政策法规</li>
+              <li class="cuts">警钟长鸣</li>
+              <li class="navlasts"><a href="" class="more">更多+</a></li>
+            </ul>
+            <div class="switchs">
+              <!-- 保密知识 -->
+              <ul class="act">
+                <li><a href="">保密知识系统集成资质单位保密管理工作座谈会通知</a></li>
+                <li><a href="">保密知识系统集成资质单位保密管理工作座谈会通知99999999999999999999999999999999999999999999999999999999999999999999999999999999</a></li>
+                <li><a href="">保密知识系统集成资质单位保密管理工作座谈会通知</a></li>
+              </ul>
+              <!-- 政策法规 -->
+              <ul>
+                <li><a href="">政策法规涉密信息系统集成资质单位保密管理工作座谈会通知</a></li>
+                <li><a href="">政策法规涉密信息系统集成资质单位保密管理工作座谈会通知99999999999999999999999999999999999999999999999999999999999999999999999999999999</a></li>
+                <li><a href="">政策法规涉密信息系统集成资质单位保密管理工作座谈会通知</a></li>
+              </ul>
+              <!-- 警钟长鸣 -->
+              <ul>
+                <li><a href="">警钟长鸣涉密信息系统集成资质单位保密管理工作座谈会通知</a></li>
+                <li><a href="">警钟长鸣涉密信息系统集成资质单位保密管理工作座谈会通知99999999999999999999999999999999999999999999999999999999999999999999999999999999</a></li>
+                <li><a href="">警钟长鸣涉密信息系统集成资质单位保密管理工作座谈会通知</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content_r">
+      <div class="newslwss">
+        <ul class="newsl_navss">
+          <li class="activess cutss">保密工作要讯</li>
+          <li class="cutss">工作动态</li>
+          <li class="cutss">业务交流</li>
+          <li class="navlastss"><a href="" class="more">更多+</a></li>
+        </ul>
+        <div class="switchss">
+          <!-- 保密工作要讯 -->
+          <ul class="act">
+            <li><a href="">保密工作要讯系统集成资质单位保密管理工作座谈会通知</a></li>
+            <li><a href="">保密工作要讯系统集成资质单位保密管理工作座谈会通知99999999999999999999999999999999999999999999999999999999999999999999999999999999</a></li>
+            <li><a href="">保密工作要讯系统集成资质单位保密管理工作座谈会通知</a></li>
+            <li><a href="">保密工作要讯系统集成资质单位保密管理工作座谈会通知</a></li>
+            <li><a href="">保密工作要讯系统集成资质单位保密管理工作座谈会通知99999999999999999999999999999999999999999999999999999999999999999999999999999999</a></li>
+            <li><a href="">保密工作要讯系统集成资质单位保密管理工作座谈会通知</a></li>
+
+            <li><a href="">保密工作要讯系统集成资质单位保密管理工作座谈会通知</a></li>
+            <li><a href="">保密工作要讯系统集成资质单位保密管理工作座谈会通知99999999999999999999999999999999999999999999999999999999999999999999999999999999</a></li>
+            <li><a href="">保密工作要讯系统集成资质单位保密管理工作座谈会通知</a></li>
+            <li><a href="">保密工作要讯系统集成资质单位保密管理工作座谈会通知</a></li>
+            <li><a href="">保密工作要讯系统集成资质单位保密管理工作座谈会通知99999999999999999999999999999999999999999999999999999999999999999999999999999999</a></li>
+            <li><a href="">保密工作要讯系统集成资质单位保密管理工作座谈会通知</a></li>
+            <li><a href="">保密工作要讯系统集成资质单位保密管理工作座谈会通知</a></li>
+            <li><a href="">保密工作要讯系统集成资质单位保密管理工作座谈会通知99999999999999999999999999999999999999999999999999999999999999999999999999999999</a></li>
+            <li><a href="">保密工作要讯系统集成资质单位保密管理工作座谈会通知</a></li>
+            <li><a href="">保密工作要讯系统集成资质单位保密管理工作座谈会通知</a></li>
+            <li><a href="">保密工作要讯系统集成资质单位保密管理工作座谈会通知99999999999999999999999999999999999999999999999999999999999999999999999999999999</a></li>
+            <li><a href="">保密工作要讯系统集成资质单位保密管理工作座谈会通知</a></li>
+          </ul>
+          <!-- 工作动态 -->
+          <ul>
+            <li><a href="">工作动态涉密信息系统集成资质单位保密管理工作座谈会通知</a></li>
+            <li><a href="">工作动态涉密信息系统集成资质单位保密管理工作座谈会通知99999999999999999999999999999999999999999999999999999999999999999999999999999999</a></li>
+            <li><a href="">工作动态涉密信息系统集成资质单位保密管理工作座谈会通知</a></li>
+          </ul>
+          <!-- 业务交流 -->
+          <ul>
+            <li><a href="">业务交流涉密信息系统集成资质单位保密管理工作座谈会通知</a></li>
+            <li><a href="">业务交流涉密信息系统集成资质单位保密管理工作座谈会通知99999999999999999999999999999999999999999999999999999999999999999999999999999999</a></li>
+            <li><a href="">业务交流涉密信息系统集成资质单位保密管理工作座谈会通知</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  <script src="./js/jquery.countup.min.js"></script>
+  <script src="./js/jquery.waypoints.min.js"></script>
+  <script src="./js/top.js"></script>
+  <script>
+    $(function () {
+      if (window.history && window.history.pushState) {
+        $(window).on('popstate', function () {
+          window.history.pushState('forward', null, '#');
+          window.history.forward(1);
+        });
+      }
+      window.history.pushState('forward', null, '#');
+      window.history.forward(1);
+    })
+
+    // 背景音乐状态控制
+    if (localStorage.getItem('control') == "false") {
+      $('#music')[0].autoplay = false
+    } else {
+      $('#music')[0].autoplay = true
+    }
+
+    // 主页显示判断
+    if (!localStorage.getItem('advanced')) {
+      $('.cmarry').hide()
+      $('.marry').hide()
+    } else {
+      $('.btn-list').hide()
+      $('.marry').show()
+      $('.cmarry').show()
+    }
+    // 通知公告tab切换
+    $('.cut').click(function () {
+      var index = $(".cut").index(this)
+      for (var i = 0; i < $('.cut').length; i++) {
+        $('.cut').eq(i).removeClass('active')
+      }
+      $(this).addClass('active')
+      for (var i = 0; i < $('.switch ul').length; i++) {
+        $('.switch ul').eq(i).hide(500)
+      }
+      $('.switch ul').eq(index).show(500)
+    })
+
+    // 保密知识tab切换
+    $('.cuts').click(function () {
+      var index = $(".cuts").index(this)
+      for (var i = 0; i < $('.cuts').length; i++) {
+        $('.cuts').eq(i).removeClass('actives')
+      }
+      $(this).addClass('actives')
+      for (var i = 0; i < $('.switchs ul').length; i++) {
+        $('.switchs ul').eq(i).hide(500)
+      }
+      $('.switchs ul').eq(index).show(500)
+    })
+
+    // 保密工作要讯tab切换
+    $('.cutss').click(function () {
+      var index = $(".cutss").index(this)
+      for (var i = 0; i < $('.cutss').length; i++) {
+        $('.cutss').eq(i).removeClass('activess')
+      }
+      $(this).addClass('activess')
+      for (var i = 0; i < $('.switchss ul').length; i++) {
+        $('.switchss ul').eq(i).hide(500)
+      }
+      $('.switchss ul').eq(index).show(500)
+    })
+
+    // 进入模式跳转
+    $('.btn-list button').click(function () {
+      var index = $('.btn-list button').index(this);
+      localStorage.setItem("mode", index);
+      window.location.href = "./mode.html"
+    })
+
+
+
+    //  匹配记时间
+    if (localStorage.getItem('advanced')) {
+      var m = localStorage.getItem("marryt") || 0;
+      var s = localStorage.getItem("marrys") || 0;
+      var timer = setInterval(function () {
+        if (s < 10) {
+          //如果秒数少于10在前面加上0
+          $('#time').html(m + ':0' + s);
+        }
+        if (m < 10 && s < 10) {
+          //如果分数少于10在前面加上0
+          $('#time').html('0' + m + ':0' + s);
+        } else {
+          $('#time').html(m + ':' + s);
+        }
+        s++;
+        if (s > 59) {
+          //如果秒数少于0就变成59秒
+          s = 0;
+          m++;
+        }
+        localStorage.setItem('marryt', m)
+        localStorage.setItem('marrys', s)
+      }, 1000)
+    } else {
+      clearInterval(timer);
+    }
+
+
+    //匹配等待时间
+    if (localStorage.getItem('advanced')) {
+      var m = sessionStorage.getItem("wmarryt") || 0;
+      var s = sessionStorage.getItem("wmarrys") || 0;
+      var timer = setInterval(function () {
+        if (s < 10) {
+          //如果秒数少于10在前面加上0
+          $('#wtime').html(m + ':0' + s);
+        }
+        if (m < 10 && s < 10) {
+          //如果分数少于10在前面加上0
+          $('#wtime').html('0' + m + ':0' + s);
+        } else {
+          $('#wtime').html(m + ':' + s);
+        }
+        s++;
+        if (s > 59) {
+          //如果秒数少于0就变成59秒
+          s = 0;
+          m++;
+        }
+        sessionStorage.setItem('wmarryt', m)
+        sessionStorage.setItem('wmarrys', s)
+      }, 1000)
+    } else {
+      clearInterval(timer);
+    }
+
+    //退出匹配页
+    $('.back_marry').click(function () {
+      localStorage.removeItem('advanced')
+      localStorage.removeItem('marryt')
+      localStorage.removeItem('marrys')
+      sessionStorage.removeItem('wmarryt')
+      sessionStorage.removeItem('wmarrys')
+      window.location = './home.html'
+    })
+
+    // 接受挑战
+
+    $('.jsmarry').click(function () {
+      localStorage.removeItem('advanced')
+      localStorage.removeItem('marryt')
+      localStorage.removeItem('marrys')
+      sessionStorage.removeItem('wmarryt')
+      sessionStorage.removeItem('wmarrys')
+      window.location = './answer.html'
+    })
+  </script>
+</body>
+
+</html>

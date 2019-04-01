@@ -1,0 +1,532 @@
+/* 内容主体部分 */
+.content {
+  margin-top: 162px;
+  display: flex
+}
+
+#wtime {
+  margin-left: 70px;
+  margin-top: 56px;
+  font-size: 30px;
+  color: #7b2b00;
+  font-weight: bold;
+}
+
+.content .content_l {
+  width: 65%;
+  margin-top: 50px;
+}
+
+.content .content_l .btn-list {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.content .content_l button {
+  outline: none;
+  border: none;
+  width: 320px;
+  height: 116px;
+  cursor: pointer;
+
+}
+
+.content .content_l .exercise {
+  background: url('../img/practice.png') no-repeat;
+  margin-right: 60px;
+  background-size: contain;
+}
+
+.content .content_l .fight {
+  background: url('../img/fight.png') no-repeat;
+  margin-right: 60px;
+  background-size: contain;
+}
+
+.content .content_l .advanced {
+  background: url('../img/advanced.png') no-repeat;
+  background-size: contain;
+}
+
+.content .content_l .news {
+  display: flex;
+  margin-top: 20px;
+
+}
+
+.content .content_l .news .newslw,
+.newslws,
+.newslwss {
+  margin-top: 105px;
+  margin-left: 50px;
+  margin-right: 80px;
+}
+
+.newslwss {
+  margin-right: 170px;
+}
+
+.newslw a,
+.newslws a,
+.newslwss a {
+  font-size: 16px;
+  color: #7b2b00;
+}
+
+.newsl_nav li,
+.newsl_navs li,
+.newsl_navss li {
+  font-size: 16px;
+  color: #7b2b00;
+  cursor: pointer;
+}
+
+.newslw .more,
+.newslws .more,
+.newslwss .more {
+  font-size: 12px;
+}
+
+.switch ul li,
+.switchs ul li,
+.switchss ul li {
+  height: 40px;
+  line-height: 40px;
+}
+
+.switch ul,
+.switchs ul,
+  {
+  overflow-y: auto;
+  height: 360px;
+}
+
+.switchss ul {
+  height: 530px;
+  overflow-y: auto;
+}
+
+.switch ul li a,
+.switchs ul li a,
+.switchss ul li a {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  display: inline-block
+}
+
+.newsl_nav .active,
+.newsl_navs .actives,
+.newsl_navss .activess {
+  font-size: 18px;
+  font-weight: bold;
+  color: #7b2b00;
+}
+
+.newsl_nav,
+.newsl_navs,
+.newsl_navss {
+  display: flex;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ffd1b3;
+
+}
+
+.switch ul:not(.act),
+.switchs ul:not(.act),
+.switchss ul:not(.act) {
+  display: none
+}
+
+.newsl_nav li,
+.newsl_navs li {
+  width: 100px;
+}
+
+.newsl_navss li {
+  width: 120px;
+}
+
+.navlast,
+.navlasts,
+.navlastss {
+  flex: 1;
+  text-align: right;
+
+}
+
+.content .content_l .news .news_l,
+.news .news_r {
+  background: url('../img/nav.png') no-repeat;
+  width: 594px;
+  height: 585px;
+  background-size: contain;
+  margin-left: 30px;
+}
+
+.content .content_r {
+  width: 35%;
+  background: url('../img/navl.png') no-repeat;
+  height: 745px;
+  background-size: contain;
+  margin-top: 30px;
+  position: relative;
+  left: 60px
+}
+
+
+
+/* 解决分辨率问题 */
+
+@media screen and (max-width: 1600px) {
+
+  .switchss ul {
+    height: 420px;
+
+  }
+
+  .newslwss {
+    margin-right: 125px;
+    margin-left: 40px;
+  }
+
+  .switch ul,
+  .switchs ul {
+    height: 230px;
+  }
+
+  .content .content_r {
+    height: 630px;
+  }
+
+  .content .content_l .news .news_l,
+  .news .news_r {
+    width: 470px;
+  }
+
+  .content .content_l button {
+    width: 280px;
+  }
+
+  .content .content_l .btn-list {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+}
+
+.marry,
+.cmarry {
+  width: 1112px;
+  height: 140px;
+  background: url(../img/marry.png) no-repeat;
+  margin-left: 80px;
+  display: flex
+}
+
+.marry .pipei {
+  margin-left: 70px;
+  margin-top: 56px;
+  font-family: "HYZhuZiChaoRanTiW";
+  font-size: 30px;
+  color: #7b2b00;
+}
+
+.marry .waitd {
+  font-size: 16px;
+  color: #7b2b00;
+  margin-left: 40px;
+  margin-top: 65px;
+}
+
+.marry .pipei span {
+  font-weight: bold;
+  font-family: "MicrosoftYaHei";
+  margin-left: 40px;
+}
+
+.marry img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-top: 27px;
+}
+
+.marry .spinner {
+  margin-top: 60px;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 60px;
+}
+
+#time {
+  display: inline-block;
+  width: 80px;
+}
+
+.cpip {
+  font-family: "HYZhuZiChaoRanTiW";
+  font-size: 30px;
+  color: #7b2b00;
+  margin-left: 70px;
+  margin-top: 54px;
+}
+
+.marry .marryr,
+.cmarry .cmarryr {
+  margin-left: 50px;
+}
+
+.cmarry .rolem {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-top: 27px;
+}
+
+.cmarry .vs {
+  width: 80px;
+  height: 80px;
+  margin-top: 30px;
+}
+
+.spinner>div {
+  background-color: #67CF22;
+  height: 20px;
+  width: 6px;
+  display: inline-block;
+  -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
+  animation: stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes stretchdelay {
+
+  0%,
+  40%,
+  100% {
+    -webkit-transform: scaleY(0.4)
+  }
+
+  20% {
+    -webkit-transform: scaleY(1.0)
+  }
+}
+
+@keyframes stretchdelay {
+
+  0%,
+  40%,
+  100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }
+
+  20% {
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
+}
+
+.content .marry .rmarry,
+.content .cmarry .crmarry {
+  background: url(../img/rmarry.png) no-repeat;
+  width: 228px;
+  height: 66px;
+  margin-top: 40px;
+  margin-left: 80px;
+}
+
+.content .cmarry .crmarry {
+  margin-left: 80px;
+}
+
+.content .cmarry .jsmarry {
+  background: url(../img/jsmarry.png) no-repeat;
+  width: 228px;
+  height: 66px;
+  margin-top: 40px;
+  margin-left: 30px;
+}
+
+@media screen and (max-width: 1600px) {
+
+  .marry,
+  .cmarry {
+    background-size: contain;
+    width: 1000px;
+    margin-left: 20px;
+  }
+
+  .marry .marryr,
+  .cmarry .cmarryr,
+  .cpip {
+    margin-left: 20px;
+  }
+
+  .marry .pipei {
+    margin-left: 20px;
+  }
+
+  .content .marry .rmarry {
+    margin-left: 40px;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+
+  .marry,
+  .cmarry {
+    background-size: contain;
+    display: flex;
+    width: 950px;
+    margin-left: 20px;
+  }
+
+  .cmarry button {
+    margin-left: 20px !important;
+  }
+
+  .newsl_navss li {
+    width: 100px;
+  }
+
+  .newsl_navss .cutss {
+    font-size: 12px
+  }
+
+  .newsl_navss .activess {
+    font-size: 14px
+  }
+
+  .switchss ul {
+    height: 380px;
+
+  }
+
+  .content .content_l button {
+    width: 260px;
+  }
+
+  .content .content_l .btn-list {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .content .content_r {
+    left: 60px;
+  }
+
+  .content .content_r {
+    height: 580px;
+  }
+
+}
+
+@media screen and (max-width: 1400px) {
+
+  .content .content_r {
+    height: 565px;
+    left: 70px;
+
+  }
+
+  .newsl_navss li {
+    width: 90px;
+  }
+
+  .newsl_navss .cutss {
+    font-size: 12px
+  }
+
+  .newsl_navss .more {
+    font-size: 12px
+  }
+
+  .switchss ul {
+    height: 350px;
+
+  }
+
+  .content .content_l .exercise {
+    margin-right: 50px;
+  }
+
+  .content .content_l .fight {
+    margin-right: 50px;
+  }
+
+}
+
+@media screen and (max-width: 1380px) {
+
+  .marry,
+  .cmarry {
+    background-size: contain;
+    display: flex;
+    width: 920px;
+    margin-left: 20px;
+
+  }
+
+  .marry .pipei {
+    margin-left: 10px;
+    margin-top: 40px;
+  }
+
+  .marry img {
+    margin-top: 23px;
+  }
+
+  .marry .marryr {
+    margin-left: 10px;
+  }
+
+  .marry .waitd {
+    margin-left: 20px;
+    margin-top: 50px;
+  }
+
+  .content .marry .rmarry {
+    margin-top: 26px;
+  }
+
+  .content .content_l .news .news_l,
+  .news .news_r {
+    width: 465px;
+    margin-left: 15px
+  }
+
+  .content .content_r {
+    height: 550px;
+  }
+
+  .content .content_l .exercise {
+    margin-right: 30px;
+  }
+
+  .content .content_l .fight {
+    margin-right: 30px;
+  }
+
+}

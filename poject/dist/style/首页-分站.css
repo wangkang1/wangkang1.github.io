@@ -1,0 +1,639 @@
+.m-showa {
+  margin-top: 18px;
+  height: 80px;
+  background: url("../image/home-sub-ad.png");
+}
+.header {
+  margin-top: 14px;
+  height: 30px;
+  line-height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.header >.m-title {
+  padding-right: 35px;
+  font-size: 20px;
+  color: #5fb3ff;
+  border-bottom: 2px solid #5fb3ff;
+}
+.header >.right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-bottom: 2px solid #484848;
+  margin-left: 5px;
+}
+.header >.right >a {
+  display: inline-block;
+  float: right;
+  font-size: 12px;
+  color: #0777dd;
+  cursor: pointer;
+}
+.header >.right >a >span {
+  display: inline-block;
+  margin-right: 8px;
+  vertical-align: -2px;
+}
+.header >.right >a >img {
+  display: inline-block;
+  vertical-align: -4px;
+}
+.m-content>.local {
+  height: 70px;
+  margin-top: 30px;
+  background: #f3f3f3;
+  margin-bottom: 20px;
+}
+.m-content>.local span {
+  position: relative;
+  display: inline-block;
+  background: #60b3ff;
+  width: 168px;
+  height: 100%;
+  text-align: center;
+  line-height: 70px;
+  font-size: 28px;
+  color: #fff;
+}
+.m-content>.local span:after {
+  content: "";
+  position: absolute;
+  right: -35px;
+  width: 0;
+  height: 0;
+  border-top: 35px solid transparent;
+  border-left: 35px solid #60b3ff;
+  border-bottom: 35px solid transparent;
+}
+.m-content>.local .right {
+  float: right;
+  margin-top: 28px;
+  font-size: 0;
+  height: 13px;
+  line-height: 13px;
+}
+.m-content>.local .right a {
+  display: inline-block;
+  padding: 0 25px;
+  border-right: 1px solid #d7d7d7;
+  font-size: 14px;
+  color: #0777dd;
+}
+.m-content>.local .right a:last-child {
+  border-right: none;
+}
+.hotbuy .hotcars {
+  margin-top: 18px;
+  font-size: 0;
+}
+.hotbuy .hotcars .desc {
+  position: absolute;
+  bottom: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: 40px;
+  background: rgba(0,0,0,0.5);
+  line-height: 40px;
+  padding: 0 15px;
+  font-size: 18px;
+  color: #fff;
+}
+.hotbuy .hotcars .left {
+  position: relative;
+  display: inline-block;
+  width: 248px;
+  height: 360px;
+  overflow: hidden;
+}
+.hotbuy .hotcars .left >img {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+.hotbuy .hotcars .left:hover img {
+  -webkit-transform: scale(1.03);
+      -ms-transform: scale(1.03);
+          transform: scale(1.03);
+}
+.hotbuy .hotcars .right {
+  font-size: 0;
+  display: inline-block;
+  width: 1032px;
+}
+.hotbuy .hotcars .right .list {
+  position: relative;
+  display: inline-block;
+  width: 248px;
+  height: 175px;
+  margin-left: 10px;
+  overflow: hidden;
+}
+.hotbuy .hotcars .right .list >img {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+.hotbuy .hotcars .right .list:nth-child(4)~.list {
+  margin-top: 10px;
+}
+.hotbuy .hotcars .right .list:hover img {
+  -webkit-transform: scale(1.03);
+      -ms-transform: scale(1.03);
+          transform: scale(1.03);
+}
+.info {
+  font-size: 0;
+  margin-top: 22px;
+  border-bottom: 1px solid #dadada;
+  padding-bottom: 10px;
+}
+.info .left {
+  display: inline-block;
+}
+.info .left .tophalf {
+  font-size: 0;
+  border-bottom: 1px solid #dadada;
+  padding-bottom: 10px;
+}
+.info .left .bthalf {
+  margin-top: 15px;
+}
+.info .left .item {
+  display: inline-block;
+  width: 300px;
+  margin-right: 43px;
+}
+.info .left .item .title {
+  font-size: 18px;
+  color: #125cb3;
+  line-height: 30px;
+}
+.info .right {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 2px;
+  width: 248px;
+}
+.info .right .carlb {
+  height: 250px;
+  position: relative;
+}
+.info .right .carlb .views {
+  height: 100%;
+}
+.info .right .carlb .views .view {
+  display: none;
+  height: 240px;
+  font-size: 10px;
+}
+.info .right .carlb .views .view >.img {
+  height: 100%;
+}
+.info .right .carlb .views .view >.img >img {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+.info .right .carlb .views .view.active {
+  display: block;
+}
+.info .right .carlb .views .view .desc {
+  position: absolute;
+  bottom: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 248px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px;
+  font-size: 18px;
+  color: #fff;
+  background: rgba(0,0,0,0.5);
+}
+.info .right .carlb .views .view:hover img {
+  -webkit-transform: scale(1.03);
+      -ms-transform: scale(1.03);
+          transform: scale(1.03);
+}
+.info .right .carlb .titles {
+  position: absolute;
+  bottom: 0;
+  font-size: 0;
+}
+.info .right .carlb .titles .title {
+  display: inline-block;
+  height: 10px;
+  width: 50px;
+  background: #a2d3ff;
+  border-right: 1px solid #fff;
+  -webkit-transition: width 0.65s;
+  transition: width 0.65s;
+  cursor: pointer;
+}
+.info .right .carlb .titles .title.active {
+  width: 95px;
+  background: #5fb3ff;
+}
+.info .right .carlb .titles .title:last-child {
+  border-right: 0;
+}
+.info .right .customer {
+  margin-top: 10px;
+  width: 248px;
+}
+.info .right .customer .titles {
+  height: 45px;
+  line-height: 45px;
+}
+.info .right .customer .titles .title {
+  text-align: center;
+  width: 124px;
+  display: inline-block;
+  font-size: 18px;
+  color: #646464;
+  cursor: pointer;
+}
+.info .right .customer .titles .title.active {
+  background: #a2d3ff;
+  color: #fff;
+}
+.info .right .customer .views .view {
+  font-size: 15px;
+  margin-top: 10px;
+  display: none;
+}
+.info .right .customer .views .view a {
+  display: block;
+  font-size: 14px;
+  color: #646464;
+  line-height: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.info .right .customer .views .view.active {
+  display: block;
+}
+.hotrecommend .lists {
+  margin-top: 18px;
+  font-size: 0;
+}
+.hotrecommend .lists .item {
+  display: inline-block;
+  vertical-align: top;
+  width: 248px;
+  height: 175px;
+  background-size: cover;
+  background-position: center;
+  margin-right: 10px;
+  font-size: 16px;
+  height: 256px;
+  line-height: 24px;
+  margin-bottom: 12px;
+}
+.hotrecommend .lists .item:nth-child(5n) {
+  margin-right: 0;
+}
+.hotrecommend .lists .item >.name {
+  color: #646464;
+}
+.hotrecommend .lists .item >.price {
+  overflow: hidden;
+}
+.hotrecommend .lists .item >.price >.l {
+  color: #f00;
+  float: left;
+}
+.hotrecommend .lists .item >.price >.r {
+  color: #ccc;
+  float: right;
+}
+.hotrecommend .lists .item >.connect {
+  overflow: hidden;
+}
+.hotrecommend .lists .item >.connect >.l {
+  color: #5fb3ff;
+  float: left;
+}
+.hotrecommend .lists .item >.connect >.r {
+  color: #ccc;
+  float: right;
+}
+.carpirce {
+  margin-top: 15px;
+  font-size: 0;
+}
+.carpirce .left {
+  display: inline-block;
+  width: 1020px;
+}
+.carpirce .left .address {
+  height: 60px;
+  line-height: 60px;
+  font-size: 14px;
+  color: #646464;
+}
+.carpirce .left .address .default {
+  float: left;
+  margin-left: 4px;
+}
+.carpirce .left .address a {
+  margin-left: 50px;
+}
+.carpirce .left .address a:first-child {
+  marin-left: 70px;
+}
+.carpirce .left .list-car-category {
+  height: 450px;
+  border: 1px solid #d2e8fc;
+  font-size: 0;
+}
+.carpirce .left .list-car-category .titles {
+  display: inline-block;
+  width: 160px;
+  font-size: 20px;
+  color: #646464;
+}
+.carpirce .left .list-car-category .titles .title {
+  position: relative;
+  height: 64px;
+  line-height: 64px;
+  padding-left: 40px;
+  background: #eef7ff;
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.carpirce .left .list-car-category .titles .title.active {
+  color: #0777dd;
+  background: #fff;
+  border-left: 4px solid #0777dd;
+  padding-left: 36px;
+}
+.carpirce .left .list-car-category .titles .title.active:before {
+  display: none;
+}
+.carpirce .left .list-car-category .titles .title:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+  display: block;
+  width: 131px;
+  height: 1px;
+  background: #c4e3ff;
+}
+.carpirce .left .list-car-category .titles .title:last-child:before {
+  display: none;
+}
+.carpirce .left .list-car-category .views {
+  display: inline-block;
+  width: 858px;
+  vertical-align: top;
+}
+.carpirce .left .list-car-category .views .view {
+  display: none;
+  font-size: 22px;
+}
+.carpirce .left .list-car-category .views .view.active {
+  display: block;
+}
+.carpirce .left .list-car-category .views .view .item {
+  display: inline-block;
+  width: 20%;
+  cursor: pointer;
+}
+.carpirce .left .list-car-category .views .view .item .img {
+  margin: 0 auto;
+  width: 152px;
+  height: 101px;
+  background-position: center;
+}
+.carpirce .left .list-car-category .views .view .item .desc {
+  line-height: 25px;
+  width: 121px;
+  margin: 0 auto;
+  margin-top: 18px;
+}
+.carpirce .left .list-car-category .views .view .item .desc .title {
+  font-size: 14px;
+  color: #646464;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.carpirce .left .list-car-category .views .view .item .desc .price {
+  font-size: 14px;
+}
+.carpirce .left .list-car-category .views .view .item .desc .price .current-price {
+  display: inline-block;
+  color: #fe3737;
+}
+.carpirce .left .list-car-category .views .view .item .desc .price .original-price {
+  display: inline-block;
+  float: right;
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+  color: #646464;
+}
+.carpirce .left .list-car-category .views .view .item .desc .come-from {
+  font-size: 14px;
+  color: #646464;
+}
+.carpirce .left .list-car-category .views .view .item:nth-child(5)~.item {
+  margin-top: 45px;
+}
+.carpirce .right {
+  display: inline-block;
+  vertical-align: top;
+  width: 250px;
+  margin-left: 10px;
+}
+.carpirce .right .all-buy-category {
+  border: 1px solid #d2e8fc;
+  font-size: 0;
+  margin-top: 10px;
+  height: 500px;
+}
+.carpirce .right .all-buy-category .titles {
+  display: inline-block;
+  width: 78px;
+  height: 100%;
+  background: #eef7ff;
+}
+.carpirce .right .all-buy-category .titles .title {
+  height: 47px;
+  font-size: 14px;
+  line-height: 47px;
+  color: #646464;
+  padding-left: 14px;
+  cursor: pointer;
+  position: relative;
+}
+.carpirce .right .all-buy-category .titles .title:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 8px;
+  display: block;
+  width: 61px;
+  height: 1px;
+  background: #c4e3ff;
+}
+.carpirce .right .all-buy-category .titles .title.active {
+  background: #fff;
+  padding-left: 10px;
+  border-left: 4px solid #0777dd;
+}
+.carpirce .right .all-buy-category .titles .title.active:before {
+  display: none;
+}
+.carpirce .right .all-buy-category .views {
+  display: inline-block;
+  width: 170px;
+  vertical-align: top;
+}
+.carpirce .right .all-buy-category .views .view {
+  height: 100%;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.carpirce .right .all-buy-category .views .view .img {
+  width: 130px;
+  height: 70px;
+  background-size: cover;
+  margin: 0 auto;
+}
+.carpirce .right .all-buy-category .views .view .first-desc {
+  width: 113px;
+  color: #ff2626;
+  font-size: 14px;
+  margin: 10px auto;
+}
+.carpirce .right .all-buy-category .views .view .first-desc:last-child {
+  float: right;
+}
+.carpirce .right .all-buy-category .views .view .desc {
+  width: 151px;
+  margin: 0 auto;
+  font-size: 14px;
+  color: #646464;
+  line-height: 45px;
+}
+.carpirce .right .all-buy-category .views .view .desc span:last-child {
+  float: right;
+}
+.interview .lists {
+  font-size: 0;
+  margin-top: 20px;
+}
+.interview .lists .list {
+  position: relative;
+  display: inline-block;
+  width: 248px;
+  height: 175px;
+  background-size: cover;
+  margin-left: 10px;
+  overflow: hidden;
+}
+.interview .lists .list >img {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+.interview .lists .list:nth-child(1),
+.interview .lists .list:nth-child(6) {
+  margin-left: 0;
+}
+.interview .lists .list:nth-child(6)~.list {
+  margin-top: 10px;
+}
+.interview .lists .list .desc {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 10px;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+  font-size: 16px;
+  width: 100%;
+}
+.interview .lists .list:hover img {
+  -webkit-transform: scale(1.03);
+      -ms-transform: scale(1.03);
+          transform: scale(1.03);
+}
+.merchants {
+  border-top: 1px solid #dedede;
+  font-size: 0;
+  margin-top: 10px;
+}
+.merchants .list {
+  cursor: pointer;
+  font-size: 0;
+  display: inline-block;
+  width: 25%;
+  height: 120px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 20px 28px;
+  border-left: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+}
+.merchants .list:nth-child(4),
+.merchants .list:nth-child(8),
+.merchants .list:nth-child(12) {
+  border-right: 1px solid #dedede;
+}
+.merchants .list .img {
+  display: inline-block;
+  width: 71px;
+  height: 73px;
+  background-size: cover;
+}
+.merchants .list .right {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 16px;
+  margin-left: 16px;
+}
+.merchants .list .right .title {
+  width: 170px;
+  color: #333;
+  line-height: 24px;
+}
+.merchants .list .right .title b {
+  font-weight: normal;
+  color: #5fb3ff;
+  float: right;
+}
+.merchants .list .right .address {
+  font-size: 14px;
+  color: #999;
+}
+.merchants .list .right .phone {
+  line-height: 35px;
+  color: #f00;
+}
+.m-tab.recommended-merchant >.views {
+  margin-bottom: 10px;
+  height: 371px;
+}

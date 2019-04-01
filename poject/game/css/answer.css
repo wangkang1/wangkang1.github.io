@@ -1,0 +1,634 @@
+html,
+body {
+  user-select: none;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: auto;
+  -webkit-text-size-adjust: none;
+  font-family: 'Microsoft YaHei';
+  background: url(../img/bg.png) no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.logo {
+  margin-left: 15px;
+  margin-top: 20px;
+  background: url(../img/logo.png) no-repeat;
+  width: 400px;
+  height: 162px;
+  margin-right: 40px;
+  background-size: contain;
+}
+
+.flex {
+  justify-content: center;
+  display: flex;
+  margin-top: -130px;
+}
+
+.answer {
+  margin-left: 120px;
+}
+
+.answer .cout {
+  text-align: center;
+  width: 761px;
+}
+
+.answer .cout span {
+  font-size: 48px;
+  color: #0a4485;
+  text-shadow: 2px 2px 0.3px #ddd
+}
+
+.answer .cout i {
+  font-size: 26px;
+  font-style: normal;
+  color: #0a4485;
+  text-shadow: 2px 2px 0.3px #fff
+}
+
+.answer .wait {
+  margin-right: 10px;
+  animation: wait 4s infinite;
+}
+
+@keyframes wait {
+  0% {
+    transform: rotate(180deg);
+  }
+
+  50% {
+    transform: rotate(-180deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.answer_box {
+  margin-top: 40px;
+  background: url(../img/answerbg.png) no-repeat;
+  width: 794px;
+  height: 740px;
+  background-size: contain;
+}
+
+.answer_box .answer_tit {
+  /* background: url(../img/lx.png) no-repeat; */
+  width: 168px;
+  height: 63px;
+  margin: 0 auto;
+  position: relative;
+  top: -15px
+}
+
+.answer_box .answer_top {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.answer_box .answer_top span {
+  font-size: 18px;
+  color: #7b2b00;
+  letter-spacing: 1px;
+}
+
+.answer_box .answer_top span .current {
+  font-size: 48px;
+  font-weight: normal
+}
+
+.answer_box .line {
+  margin: 0 auto;
+  width: 700px;
+  height: 1px;
+  background-color: #ffd1b3;
+}
+
+.answer .wrap {
+  overflow-y: auto;
+  height: 460px;
+}
+
+.answer_box .answer_c {
+  margin: 0 auto;
+  margin-top: 14px;
+  width: 680px;
+  font-size: 16px;
+  color: #7b2b00;
+  word-wrap: break-word;
+}
+
+.answer .change {
+  margin-top: 30px;
+  width: 700px;
+  text-align: center;
+  position: relative;
+}
+
+.answer .change .change_list {
+  position: relative;
+}
+
+.answer .change .change_list .judge {
+  position: absolute;
+  top: 10px;
+}
+
+.answer .change label {
+  font-size: 22px;
+  color: #7b2b00;
+  line-height: 60px;
+  position: relative;
+  left: -40px;
+  font-weight: bold;
+
+}
+
+.answer .change input[type=radio] {
+  position: relative;
+  left: -18px;
+  z-index: 500;
+  opacity: 0;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  top: 2px;
+
+}
+
+input[type=radio]+label:before {
+  content: "\26AB";
+  border: 1px solid #7b2b00;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 20px;
+  line-height: 19px;
+  margin: -5px 20px 0 0;
+  height: 20px;
+  margin-top: -5px;
+  width: 20px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 0;
+  transition: font-size ease .3s;
+}
+
+input[type=radio]:checked+label:before {
+  font-size: 20px;
+}
+
+.answer .change .sure_btn {
+  background: url('../img/surebtn.png') no-repeat;
+  width: 308px;
+  height: 88px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-top: 30px;
+  
+
+}
+.answer .change .wait_btn {
+  background: url('../img/wait_btn.png') no-repeat;
+  width: 308px;
+  height: 88px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-top: 30px;
+  font-size: 26px;
+  font-family: "HYZhuZiChaoRanTiW";
+  color:#ffffff
+}
+.answer .change .result {
+  position: absolute;
+  top: 90px;
+  right: -28px;
+}
+
+.rate {
+  width: 761px;
+  position: relative;
+  overflow: hidden;
+}
+.property button{
+ border: none;
+ outline: none;
+ background: #ffedd6;
+ cursor: pointer;
+}
+.rate_img {
+  background: url(../img/rate.png) no-repeat;
+  width: 708px;
+  height: 28px;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+}
+
+.rate .progress {
+  width: 0px;
+  height: 20px;
+  border-radius: 10px;
+  background: #e6e6e6;
+  position: absolute;
+  top: 4px;
+  left: 705px;
+  transition: .3s;
+  overflow: hidden;
+  max-width: 708px;
+}
+
+.danger {
+  color: #ff3333 !important
+}
+
+.card {
+  padding: 40px;
+  background: url(../img/props.png) no-repeat;
+  width: 350px;
+  margin-top: 220px;
+  margin-left: 60px;
+  display: none;
+}
+
+.card .vs {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.card .vs .role {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.card .use {
+  font-size: 30px;
+  color: #7b2b00;
+  font-family: "HYZhuZiChaoRanTiW";
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.card .property li {
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+
+.card .property li span {
+  margin-left: 14px;
+  font-size: 36px;
+  font-family: "HYZhuZiChaoRanTiW";
+  font-weight: bold;
+  text-shadow: 2px 2px 0.3px #fff;
+  position: relative;
+  top: -14px;
+  color: #0d77b5;
+
+}
+
+.card .property li .debar {
+  color: #b50000;
+}
+
+.card .property li i {
+  font-style: normal
+}
+.leaved {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 120px;
+  margin-top: -160px;
+}
+.leaved  button{
+  border: none;
+  outline: none;
+  background: url('../img/leave.png') no-repeat;
+  width: 66px;
+  height: 108px;
+  cursor: pointer;
+}
+
+/* 模态框样式 */
+.modal-dialog {
+  background: url(../img/overbg.png) no-repeat;
+  width: 594px;
+  height: 659px;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1000;
+  margin-left: -287px;
+  margin-top: -330px;
+}
+.modal{
+  display: none;
+  background: rgba(0,0,0,.3);
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+#modal .lxover {
+  background: url(../img/lxover.png) no-repeat;
+  width: 167px;
+  height: 50px;
+  margin: 0 auto;
+  position: relative;
+  top: -15px;
+}
+
+#modal .romo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-top: 40px;
+
+}
+
+#modal .role_name {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #7b2b00;
+}
+
+#modal .rolejd span {
+  font-family: "HYZhuZiChaoRanTiW";
+  font-size: 14px;
+  color: #7b2b00;
+  margin-right: 10px;
+  position: relative;
+  top: -3px;
+}
+
+#modal i {
+  font-style: normal
+}
+
+#modal .oline {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  width: 520px;
+  height: 1px;
+  background-color: #ffd1b3;
+  margin-left: 35px;
+
+}
+
+#modal .mlist li {
+  margin-bottom: 20px;
+  width: 163px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 37%;
+  font-size: 20px;
+  color: #7b2b00;
+}
+
+#modal .mbtn .again {
+  background: url(../img/again.png) no-repeat;
+  width: 125px;
+  height: 106px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 140px;
+}
+
+#modal .mbtn .leave {
+  background: url(../img/leave.png) no-repeat;
+  width: 106px;
+  height: 108px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+#modal .dules {
+  background: url(../img/schedule.png) no-repeat;
+  width: 186px;
+  height: 16px;
+  position: relative;
+  margin: 0 auto
+}
+
+#modal .mprocess {
+  background: #e6e6e6;
+  height: 10px;
+  position: absolute;
+  border-radius: 5px;
+  top: 3px;
+}
+
+.dzimg {
+  position: absolute;
+  margin-top: 40px;
+  margin-left: 20px;
+  display: none;
+}
+.alert,.alerts{
+  display: none;
+    background: rgba(0,0,0,.3);
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.alert .layc-alert,.alerts .layc-alert{
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1000;
+  width: 320px;
+  height: 280px;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  box-sizing: border-box;
+  color: #484848;
+  background: url(../img/toast.png) no-repeat 100% 100%;
+  background-size:contain;
+  color: #7b2b00;
+}
+.alert .layc-alert h2{
+  font-size: 30px;
+  margin-top: 20px;
+}
+.alerts .layc-alert h2{
+  font-size: 20px;
+  margin-top: 20px;
+}
+.alert .layc-alert .atitle{
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.alerts .layc-alert .atitle {
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.alert .layc-alert .alert_btn button,.alerts .layc-alert .alert_btn button{
+  width: 228px;
+  height: 66px;
+  display: block;
+  outline: none;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+}
+.alert .layc-alert .alert_btn .asure,.asures{
+  background: url('../img/sure.png') no-repeat;
+  margin-bottom: 10px;
+}
+.alert .layc-alert .alert_btn .renounce{
+  background: url('../img/renounce.png') no-repeat
+
+}
+.renounces{
+  background: url('../img/cancel.png') no-repeat
+}
+/* 解决分辨率问题 */
+@media screen and (max-width: 1600px) {
+  .answer {
+    margin-top: -50px;
+
+  }
+ 
+  .card {
+    position: absolute;
+    right: 90px;
+    top: -90px;
+    height: 621px;
+
+  }
+  .leaved{
+    margin-right: 10px;
+  }
+  .answer .cout span {
+    font-size: 30px
+  }
+
+  .answer_box {
+    margin-top: 20px;
+  }
+
+  .answer_box {
+    height: 650px;
+  }
+
+  .answer_box .line {
+    width: 600px;
+    margin-left: 40px;
+  }
+
+  .answer_box .answer_top {
+    margin: 0px;
+  }
+
+  .answer .change .result {
+    right: 60px
+  }
+
+  .answer .change {
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 1460px) {
+  .leaved{
+    justify-content: flex-start;
+    margin-left: 180px;
+  }
+  .card {
+    right: 20px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .answer {
+    margin-left: 122px;
+  }
+
+  .answer_box {
+    height: 550px;
+    margin-left: 90px;
+  }
+
+  .answer_box .answer_top {
+    margin: 0px;
+    margin-left: -190px;
+  }
+
+  .answer_box .answer_tit {
+    left: -80px
+  }
+
+  .change_list {
+    height: 40px;
+    margin-left: -110px;
+  }
+
+  .answer_box .line {
+    width: 500px;
+    margin-left: 40px;
+  }
+
+  .answer .change .result {
+    right: 155px;
+    top: 30px;
+  }
+
+  .answer .wrap {
+    height: 350px;
+  }
+
+  .answer .change .sure_btn {
+    margin-left: -80px;
+  }
+
+  .logo {
+    width: 250px;
+  }
+
+  .card .vs {
+    margin-left: -50px;
+    margin-bottom: 20px;
+  }
+
+  .property {
+    margin-left: -20px;
+  }
+
+  .card {
+    position: absolute;
+    right: 40px;
+    top: -100px;
+    height: 531px;
+    background-size: contain;
+  }
+  .leaved{
+    margin-right: 10px;
+  }
+}

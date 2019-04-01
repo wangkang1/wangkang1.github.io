@@ -1,0 +1,88 @@
+.install {
+  margin: 200px auto 0;
+  background: url('../img/setbg.png') no-repeat;
+  width: 794px;
+  height: 590px;
+  text-align: center
+}
+
+.install .install_tit {
+  margin-top: -10px;
+}
+
+.install h2 {
+  margin-top: 70px;
+  font-size: 24px;
+  color: #7b2b00;
+  margin-bottom: 20px;
+}
+
+.install .line {
+  width: 720px;
+  height: 1px;
+  background-color: #ffd1b3;
+  margin: 0 auto 65px;
+}
+
+.install_list label {
+  font-size: 22px;
+  color: #7b2b00;
+  line-height: 60px;
+  position: relative;
+  left: -40px;
+  font-weight: bold;
+}
+
+.install_list input[type=radio] {
+  position: relative;
+  left: -18px;
+  z-index: 500;
+  opacity: 0;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  top: 2px;
+
+}
+
+input[type=radio]+label:before {
+  content: "\26AB";
+  border: 1px solid #7b2b00;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 20px;
+  line-height: 19px;
+  margin: -5px 20px 0 0;
+  height: 20px;
+  margin-top: -5px;
+  width: 20px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 0;
+  transition: font-size ease .3s;
+}
+
+input[type=radio]:checked+label:before {
+  font-size: 20px;
+}
+
+.btn {
+  margin-top: 65px;
+}
+
+.btn button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 228px;
+  height: 66px;
+}
+
+.btn .sure_btn {
+  background: url('../img/sure.png') no-repeat;
+  margin-right: 95px;
+}
+
+.btn .back_btn {
+  background: url('../img/sback.png') no-repeat;
+}

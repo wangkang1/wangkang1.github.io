@@ -1,0 +1,395 @@
+html,
+body {
+  user-select: none;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: auto;
+  -webkit-text-size-adjust: none;
+  font-family: 'Microsoft YaHei';
+  background: url(../img/bg.png) no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.top {
+  display: flex;
+  z-index: 3000;
+  height: 200px;
+  position: absolute;
+  width: 100%;
+}
+
+.top .logo {
+  margin-left: 15px;
+  margin-top: 20px;
+  background: url(../img/logo.png) no-repeat;
+  width: 400px;
+  height: 162px;
+  margin-right: 40px;
+  background-size: contain;
+}
+
+.top .nav ul {
+  display: flex;
+  margin-top: 65px;
+}
+
+.top .nav ul li {
+  margin-right: 40px;
+}
+.top .info {
+  flex: 1
+}
+.top .info .role {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+
+.top .info .role .role_info {
+  display: flex
+}
+
+.identity {
+  display: flex
+}
+
+.identity .rolg_img {
+  margin-top: 25px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%
+}
+
+.nav {
+  width: 564px;
+}
+
+.identity .wrap {
+  margin-left: 9px;
+  margin-top: 30px;
+  width: 210px;
+}
+
+.identity .name,
+.identity .title {
+  font-size: 18px;
+  color: #ffffff;
+}
+
+@font-face {
+  font-family: "HYZhuZiChaoRanTiW";
+  src: url('../fonts/HYZhuZiChaoRanTiW-1.ttf') format("truetype"),
+}
+
+.identity .name span {
+  font-family: "HYZhuZiChaoRanTiW" !important;
+  color: #facf32;
+  font-size: 14px;
+  text-shadow: 0.8px 0.8px 0px #ddd
+}
+
+.identity .wrap .progress {
+  background: url(../img/schedule.png) no-repeat;
+  width: 186px;
+  height: 16px;
+  position: relative;
+  margin-top: 10px;
+}
+
+ .mprocess {
+  background: #e6e6e6;
+  height: 10px;
+  position: absolute;
+  border-radius: 5px;
+  top: 3px;
+}
+.role_info .gold {
+  margin-top: 32px;
+}
+
+.role_info .gold span {
+  font-family: "HYZhuZiChaoRanTiW" !important;
+  color: #febd2c;
+  font-size: 18px;
+  position: relative;
+  top: -10px;
+  text-shadow: 0.8px 0.8px 0px #8c8888
+}
+
+.role_info .gold .gold_tit {
+  margin-left: 10px;
+  margin-right: 15px;
+}
+
+.role .quit {
+  margin-top: 32px;
+  margin-right: 20px;
+
+}
+
+
+.nav li img {
+  transition: 2s;
+}
+
+.nav li img:hover {
+  transform: scale(1.1);
+}
+
+.role .quit span {
+  font-family: "HYZhuZiChaoRanTiW";
+  font-size: 22px;
+  color: #fb3b2f;
+  text-shadow: 0.8px 0.8px 0px #ddd;
+  position: relative;
+  top: -10px;
+  margin-right: 5px;
+}
+
+.info .task {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 25px;
+  margin-top: 10px;
+}
+
+.info .task .card {
+  display: flex
+}
+
+.info .task .card li {
+  margin-right: 60px;
+}
+
+.info .task .card span {
+  position: relative;
+  top: -10px;
+  font-size: 18px;
+  font-family: "HYZhuZiChaoRanTiW";
+  text-shadow: 2px 2px 2px #ccc;
+  color: #0d77b5;
+}
+
+.info .task .card .task_name {
+  margin-left: 15px;
+}
+
+.info .task .card .taskc {
+  color: #b50000;
+}
+
+.info .task .card .add_img {
+  margin-left: 15px;
+  cursor: pointer;
+  transition: 2s;
+}
+
+.info .task .card .add_img:hover {
+  transform: rotate(360deg)
+}
+
+.info .task .tips {
+  margin-right: 20px;
+}
+
+.info .task .tips .duty {
+  font-family: "HYZhuZiChaoRanTiW";
+  font-size: 22px;
+  color: #e88c22;
+  text-shadow: 0.8px 0.8px 0px #ddd;
+  position: relative;
+  top: -10px;
+  margin-right: 45px;
+}
+
+.hwrap {
+  min-height: 30px;
+  margin-top: -30px;
+ }
+
+.tips .duty_center {
+  position: absolute;
+  width: 332px;
+  height: 212px;
+  background-color: #ffedd6;
+  border: solid 2px #e88c22;
+  border-radius: 5px;
+   right: 12px;
+  display: none;      
+   top: 152px;
+   overflow-y: auto 
+ 
+}
+.tips .duty_center li:not(.arr){
+height: 40px;
+border-bottom: 1px  solid #ffd1b3;
+line-height: 40px;
+margin-left: 20px;
+margin-right: 20px;
+display: flex;
+justify-content: space-between
+}
+.tips .duty_center li button{
+  width: 100px;
+	height: 28px;
+	background-color: #63cd0f;
+  border-radius: 6px;
+  outline: none;
+  font-size: 14px;
+  color: #fff;
+  margin-top: 5px;
+  border: none;
+  cursor: pointer;
+  border-bottom:1px  solid  #63cd0f;
+  box-shadow: inset 0px -3px 1px 0px 
+  #336600;
+
+}
+.tips .duty_center li i {
+  color: #999999;
+  font-style: normal;
+  text-align: center;
+  position: relative;
+  left: -24px;
+}
+.tips .duty_center .receive{
+  position: relative;
+  left: -24px;
+} 
+.tips .shade{
+  position: absolute;
+  width: 148px;
+	height: 95px;
+	background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+  color: #fff;
+  padding-top: 10px;
+  padding-left: 15px;
+  font-size: 14px;
+  top: 220px;
+  right: 150px;
+  display: none
+}
+.tips .shade ul{
+  margin-left: 30px;
+
+}
+.tips .duty_center li span{
+  font-size: 16px;
+	color: #7b2b00;
+}
+.arrow {
+  position: fixed;
+  width: 40px;
+  height: 20px;
+  right: 6px;
+  top: 134px;
+ 
+}
+
+.arrow * {
+  display: block;
+  border-width: 10px 10px;
+  position: absolute;
+   border-style: solid dashed dashed dashed; 
+  font-size: 0;
+  line-height: 0;
+}
+
+.arrow em {
+  border-color: transparent  transparent  #e88c22;
+}
+
+.arrow span {
+  border-color:  transparent transparent #ffedd6;
+  top: 4px;
+}
+
+.tips_img {
+  cursor: pointer;
+  position: absolute;
+  z-index: 3000;
+  right: 20px;
+  bottom: 60px;
+  transition: 2s;
+ 
+}
+
+.tips_img:hover {
+  transform: rotate(360deg)
+}
+
+/* //水波纹按钮动画 */
+.circle {
+  animation: circle-opacity 2s infinite;
+  background: #c7840a;
+  border-radius: 50%;
+  opacity: 0;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  right: 8px;
+  bottom: 46px;
+
+}
+
+@keyframes circle-opacity {
+  from {
+    opacity: 1;
+    transform: scale(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .nav {
+    width: 490px;
+
+  }
+  
+  .top .nav ul li {
+    margin-right: 10px;
+  }
+
+  .lojump {
+    width: 300px;
+  }
+
+  .top .logo {
+    width: 280px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .nav {
+    width: 480px;
+
+  }
+ 
+  .top .nav ul li {
+    margin-right: 15px;
+  }
+  .role_info .gold .gold_tit{
+    margin-right: 10px;
+  }
+  .lojump {
+    width: 290px;
+  }
+
+  .top .logo {
+    width: 260px;
+  }
+  .top .info .role{
+
+    margin-left: 10px;
+  }
+  .info .task .card li {
+    margin-right: 30px;
+  }
+}

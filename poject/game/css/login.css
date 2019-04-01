@@ -1,0 +1,148 @@
+html,
+body {
+  user-select: none;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: auto;
+  -webkit-text-size-adjust: none;
+  font-family: 'Microsoft YaHei';
+  background: url(../img/bg.png) no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  left: 50%;
+  top: 100px;
+  transform: translateX(-50%);
+  background: url(../img/logo.png) no-repeat;
+  background-size: 100% 100%;
+  width: 399px;
+  height: 172px;
+  z-index: 200;
+}
+
+.login-box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -30%);
+  background: url(../img/login-bg.png) no-repeat;
+  background-size: 100% 100%;
+  width: 582px;
+  height: 542px;
+  text-align: center;
+}
+
+.logo-title {
+  background: url(../img/login_title.png) no-repeat;
+  width: 167px;
+  height: 46px;
+  display: inline-block;
+  margin-top: -14px;
+}
+
+.login-content {
+  margin-top: 112px;
+}
+
+.login-content .inp:first-child {
+  margin-bottom: 30px;
+}
+
+.login-content .inp label {
+  width: 48px;
+  height: 24px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #7b2b00;
+  vertical-align: middle
+}
+
+.login-content .inp input::-webkit-input-placeholder {
+  font-size: 16px;
+  line-height: 24px;
+  color: #999999;
+}
+
+.login-content .inp input {
+  width: 270px;
+  height: 38px;
+  padding-left: 10px;
+  background-color: #ffedd6;
+  border-radius: 6px;
+  border: solid 1px #b6871a;
+  margin-left: 12px;
+  outline: none;
+  color: #7b2b00;
+}
+
+input[type=text]:focus,input[type=password]:focus {
+  box-shadow: 0 0 0 2px rgba(182,135,26,0.3);
+}
+.register {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 119px;
+  margin-top: 20px;
+}
+
+.register a {
+  font-size: 14px;
+  color: #7b2b00;
+}
+
+.register a:first-child {
+  margin-right: 25px;
+}
+input[type=text]:focus {
+  box-shadow: 0 0 0 2px rgba(182,135,26,0.3);
+}
+.err {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #d93638;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  height: 20px;
+}
+
+.btn .sure {
+  background: url(../img/land.png) no-repeat 100% 100%;
+  width: 228px;
+  height: 66px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+
+
+/* 分辨率问题进行调整 */
+@media screen and (max-width: 1600px) {
+  .title {
+    top: 50px
+  }
+
+}
+
+@media screen and (max-width: 1400px) {
+  .title {
+    top: 20px
+  }
+
+  .login-box {
+    height: 450px
+  }
+
+  .logo-title {
+    margin-top: -5px
+  }
+
+  .login-content {
+    margin-top: 50px;
+  }
+}

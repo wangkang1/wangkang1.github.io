@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>保密游戏</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/login.css">
+  <link rel="stylesheet" href="./css/animate.min.css">
+</head>
+
+<body>
+  <div id="midground" class="wall"></div>
+  <div id="foreground" class="wall"></div>
+  <div class="title"> </div>
+
+  <div class="login-box">
+    <div class="logo-title"></div>
+    <div class="login-content">
+      <form action="" id="froms">
+        <div class="inp">
+          <label for="">账号</label>
+          <input type="text" class="account" placeholder="请输入注册所用手机号码">
+        </div>
+        <div class="inp">
+          <label for="">密码</label>
+          <input type="password" class="password" placeholder="请输入密码">
+        </div>
+        <div class="register">
+          <a href="./register.html">注册</a>
+          <a href="./forget.html">忘记密码</a>
+        </div>
+        <p class="err animated"></p>
+        <div class="btn">
+          <button class="sure" type="button"></button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  <script src="./js/alert.js"></script>
+  <script>
+    // 点击确定按钮
+    $('.sure').click(function () {
+      login()
+    })
+
+    //按回车执行
+    $('.password').keydown(function (event) {
+      if (event.keyCode == 13) {
+        login()
+      }
+    })
+
+    function login() {
+      if (!$('.account').val()) {
+        $('.err').text("请输入账号")
+        $('.err').removeClass("slideInDown")
+        $('.err').addClass("slideInDown")
+        return
+      }
+      if (!$('.password').val()) {
+        $('.err').text("请输入密码")
+        $('.err').removeClass("slideInDown")
+        $('.err').addClass("slideInDown")
+        return
+      }
+      //  if("账号错误"||"密码错误") {
+      //   $('.err').text("账号密码错误，请重新输入。")
+      // $('.err').removeClass("slideInDown")
+      // $('.err').addClass("slideInDown")
+      //   return
+      //  }
+      //  if("账号不存在"){
+      //   $('.err').text("用户未注册")
+      // $('.err').removeClass("slideInDown")
+      // $('.err').addClass("slideInDown")
+      //   return
+      //  }
+      else {
+        $('.err').text("")
+        alerts({
+          title: '游戏登录',
+          content: '成功登录游戏！',
+        })
+        setTimeout(function () {
+          localStorage.setItem('control', true) //背景音乐控制字段
+          localStorage.removeItem('advanced')
+          localStorage.removeItem('marryt')
+          localStorage.removeItem('marrys')
+          localStorage.removeItem('timers')
+          localStorage.removeItem('lnum')
+          localStorage.removeItem('lnums')
+          window.location = './home.html'
+          $('#froms')[0].reset()
+        }, 1000);
+      }
+
+    }
+  </script>
+</body>
+
+</html>

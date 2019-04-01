@@ -1,0 +1,71 @@
+.m-content>.classifybar {
+  font-size: 0;
+  margin-bottom: 20px;
+}
+.m-content>.classifybar >.item {
+  width: calc(1280px / 7);
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  padding-top: 3px;
+}
+.m-content>.classifybar >.item >.text {
+  display: inline-block;
+  font-size: 16px;
+  color: #999;
+  vertical-align: middle;
+}
+.m-content>.classifybar >.item >.icon {
+  vertical-align: middle;
+  margin-right: 10px;
+  width: 44px;
+  height: 44px;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: inline-block;
+}
+.m-content>.classifybar >.item:nth-child(1)>.icon {
+  background-image: url(../image/home-info-classifybar0.png);
+}
+.m-content>.classifybar >.item.active:nth-child(1)>.icon {
+  background-image: url(../image/home-info-classifybars0.png);
+}
+.m-content>.classifybar >.item:nth-child(2)>.icon {
+  background-image: url(../image/home-info-classifybar1.png);
+}
+.m-content>.classifybar >.item.active:nth-child(2)>.icon {
+  background-image: url(../image/home-info-classifybars1.png);
+}
+.m-content>.classifybar >.item:nth-child(3)>.icon {
+  background-image: url(../image/home-info-classifybar2.png);
+}
+.m-content>.classifybar >.item.active:nth-child(3)>.icon {
+  background-image: url(../image/home-info-classifybars2.png);
+}
+.m-content>.classifybar >.item:nth-child(4)>.icon {
+  background-image: url(../image/home-info-classifybar3.png);
+}
+.m-content>.classifybar >.item.active:nth-child(4)>.icon {
+  background-image: url(../image/home-info-classifybars3.png);
+}
+.m-content>.classifybar >.item:nth-child(5)>.icon {
+  background-image: url(../image/home-info-classifybar4.png);
+}
+.m-content>.classifybar >.item.active:nth-child(5)>.icon {
+  background-image: url(../image/home-info-classifybars4.png);
+}
+.m-content>.classifybar >.item:nth-child(6)>.icon {
+  background-image: url(../image/home-info-classifybar5.png);
+}
+.m-content>.classifybar >.item.active:nth-child(6)>.icon {
+  background-image: url(../image/home-info-classifybars5.png);
+}
+.m-content>.classifybar >.item:nth-child(7)>.icon {
+  background-image: url(../image/home-info-classifybar6.png);
+}
+.m-content>.classifybar >.item.active:nth-child(7)>.icon {
+  background-image: url(../image/home-info-classifybars6.png);
+}
+.m-content>.classifybar >.item.active>.text {
+  color: #0e7de1;
+}

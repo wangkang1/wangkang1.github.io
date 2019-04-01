@@ -1,0 +1,196 @@
+.userinfo {
+  margin: 200px auto 0;
+  background: url('../img/answerbg.png') no-repeat;
+  width: 794px;
+  height: 749px;
+  text-align: center
+}
+
+.userinfo .userinfo_tit {
+  margin-top: -10px;
+}
+
+.userinfo h2 {
+  margin-top: 40px;
+  font-size: 24px;
+  color: #7b2b00;
+  margin-bottom: 15px;
+}
+
+.userinfo .upload {
+  width: 380px;
+  height: 380px;
+  border: solid 1px #b6871a;
+  margin: 0 auto;
+  position: relative;
+}
+
+.userinfo .upload .upload_img {
+  background: url('../img/upload.png') no-repeat;
+  width: 52px;
+  height: 52px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+.userinfo .user_name {
+margin-top: 10px;
+}
+.userinfo .user_name label{
+  font-size: 24px;
+  color: #7b2b00;
+  font-weight: bold;
+  margin-right: 10px;
+}
+.userinfo .user_name input{
+  width: 270px;
+  height: 40px;
+  padding-left: 10px;
+	background-color: #ffedd6;
+	border-radius: 6px;
+  border: solid 1px #b6871a;
+  outline: none;
+  color: #7b2b00;
+}
+.user_name input[type=text]:focus {
+  box-shadow: 0 0 0 2px rgba(182,135,26,0.3);
+}
+.user_name input::-webkit-input-placeholder {
+  font-size: 16px;
+  line-height: 24px;
+  color: #999999;
+}
+.btn {
+  margin-top: 20px;
+}
+
+.btn button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 228px;
+  height: 66px;
+}
+
+.btn .sure_btn {
+  background: url('../img/sure.png') no-repeat;
+  margin-right: 95px;
+}
+#finalImg{
+  max-width: 380px;
+  max-height: 380px;
+  overflow: hidden;
+}
+.btn .back_btn {
+  background: url('../img/sback.png') no-repeat;
+}
+
+/* 模态框样式 */
+.modal-dialog {
+  background: url(../img/overbg.png) no-repeat;
+  width: 594px;
+  height: 659px;
+  text-align: center;
+  position: fixed;
+  top: 53%;
+  left: 50%;
+  z-index: 1000;
+  margin-left: -287px;
+  margin-top: -330px;
+}
+.modal{
+   display: none; 
+  background: rgba(0,0,0,.3);
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+#modal .lxover {
+  background: url(../img/means.png) no-repeat;
+  width: 167px;
+  height: 50px;
+  margin: 0 auto;
+  position: relative;
+  top: -15px;
+}
+
+#modal .rolejd span {
+  font-family: "HYZhuZiChaoRanTiW";
+  font-size: 14px;
+  color: #7b2b00;
+  margin-right: 10px;
+  position: relative;
+  top: -3px;
+}
+.l-btn {
+  display: inline-block;
+  outline: none;
+  resize: none;
+  border: none;
+  background: url(../img/upload.png) no-repeat;
+ width: 52px;
+ height: 52px;
+ margin-top: 50px;
+  cursor: pointer;
+  margin-left: -426px
+}
+
+.hidden {
+  display: none;
+}
+.seeimg{
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.seeimg  .imgbox{
+  width: 260px;
+  height: 260px;
+  border: solid 1px #b6871a;
+  margin-left: 60px;
+ }
+ .seeimg .parcel{
+   margin-left: 30px;
+   color: #7b2b00;
+ }
+ .seeimg .parcel .circular{
+   width: 200px;
+   height: 200px;
+    border-radius: 50%;
+    border: solid 1px #b6871a;
+    margin-top: 30px;
+    overflow: hidden;
+ }
+
+ #modal .mbtn {
+   margin-top: 40px;
+ }
+#modal .mbtn .again {
+  background: url(../img/sure.png) no-repeat;
+  width: 228px;
+  height: 66px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 20px;
+  
+}
+
+#modal .mbtn .leave {
+  background: url(../img/sback.png) no-repeat;
+  width: 228px;
+  height: 66px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.cropper-view-box, .cropper-face {
+  border-radius: 50%;
+}

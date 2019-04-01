@@ -1,0 +1,72 @@
+.login-content .inp{
+  margin-bottom: 20px;
+}
+.login-content .inp:first-child{
+  margin-bottom: 20px;
+}
+.err{
+  margin: 0;
+  margin-bottom: 8px;
+}
+.login-content .inp label{
+  width: 100px;
+  text-align: right;
+  display: inline-block;
+  margin-top: -11px;
+}
+.login-content{
+  margin-top: 80px;
+}
+.logo-titles{
+  background: url(../img/forget.png) no-repeat;
+  width: 167px;
+  height: 46px;
+  display: inline-block;
+  margin-top: -14px;
+}
+.btn button{
+  width: 228px;
+  height: 66px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.btn .sure-btn{
+  background: url(../img/sure.png) no-repeat 100% 100%;
+  margin-right: 20px;
+}
+.btn .cancel{
+  background: url(../img/cancel.png) no-repeat 100% 100%;
+}
+.code{
+  text-decoration: underline; 
+ font-size: 14px;
+ color: #7b2b00;
+ position: absolute;
+ right: 102px;
+ top: 9px; 
+}
+.obtain {
+ text-decoration: underline; 
+ font-size: 14px;
+ color: #7b2b00;
+ position: absolute;
+ right: 102px;
+ top: 9px;
+ display: none;
+}
+
+@media screen and (max-width: 1400px) {
+  .logo-titles {
+    margin-top: -5px
+  }
+  .login-content {
+    margin-top: 35px;
+  }
+  .login-content .inp:first-child {
+    margin-bottom: 10px;
+  }
+  .login-content .inp{
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,120 @@
+html {
+  font-size: 16px;
+}
+body {
+  font-family: consolas, "微软雅黑", "Microsoft Yahei", sans-serif;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  color: #5fb3ff;
+}
+img,
+a {
+  -webkit-user-drag: none;
+}
+input {
+  outline: none;
+}
+select {
+  outline: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url("../image/basic-droparrow.png");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+select option {
+  color: #000;
+}
+select:invalid {
+  color: #bbb;
+}
+.m-tab >.views {
+  overflow: hidden;
+}
+.m-tab >.views >.view {
+  display: none;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.m-tab >.views >.view.active {
+  display: block;
+}
+.m-tab >.views >.view.pre {
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
+}
+.m-tab >.views >.view.after {
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+.m-tab[data-slide] >.views {
+  position: relative;
+}
+.m-tab[data-slide] >.views >.view {
+  position: absolute;
+}
+.m-tab.titleline >.titles {
+  height: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.m-tab.titleline >.titles >.title {
+  width: 40px;
+  height: 100%;
+  background-color: #a2d3ff;
+  display: inline-block;
+  margin-right: 5px;
+  -webkit-transition: 0.6s all ease;
+  transition: 0.6s all ease;
+  vertical-align: top;
+}
+.m-tab.titleline >.titles >.title.active {
+  width: 80px;
+  background-color: #5fb3ff;
+}
+.m-scroll {
+  position: relative;
+}
+.m-scroll::-webkit-scrollbar {
+  display: none;
+}
+.m-scroll >.scroll {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 8px;
+}
+.m-scroll >.scroll >.bar {
+  border-radius: 4px;
+  width: 8px;
+  background: rgba(0,0,0,0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.anmi {
+  overflow: hidden;
+}
+.anmi img {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+.anmi:hover img {
+  -webkit-transform: scale(1.03);
+      -ms-transform: scale(1.03);
+          transform: scale(1.03);
+}

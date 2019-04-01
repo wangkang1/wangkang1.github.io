@@ -1,0 +1,203 @@
+.mmp-bodyer {
+  font-size: 0;
+}
+.mmp-bodyer .left {
+  width: 890px;
+  display: inline-block;
+  vertical-align: top;
+}
+.mmp-bodyer .left .m-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30px;
+}
+.mmp-bodyer .left .m-title span {
+  display: block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 120px;
+          flex: 0 0 120px;
+  width: 120px;
+  color: #5fb2ff;
+  font-size: 20px;
+  letter-spacing: 2px;
+  border-bottom: 4px solid #5fb2ff;
+}
+.mmp-bodyer .left .m-title .other {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-left: 10px;
+  border-bottom: 4px solid #484848;
+  text-align: right;
+  line-height: 32px;
+}
+.mmp-bodyer .left .m-title .other a {
+  display: inline-block;
+  font-size: 14px;
+  color: #aaa;
+  margin-right: 30px;
+}
+.mmp-bodyer .left .m-title .other a:last-child {
+  margin-right: 0;
+}
+.mmp-bodyer .left .m-title .other a:hover {
+  color: #5fb2ff;
+}
+.mmp-bodyer .left .m-layout .item {
+  width: 280px;
+  margin-right: 25px;
+  margin-top: 25px;
+  display: inline-block;
+}
+.mmp-bodyer .left .m-layout .item:nth-child(3n) {
+  margin-right: 0;
+}
+.mmp-bodyer .left .m-layout .item .img {
+  height: 170px;
+  background-size: cover;
+}
+.mmp-bodyer .left .m-layout .item .desc {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #625e5f;
+  line-height: 20px;
+}
+.mmp-bodyer .left .m-layout .item .time-val {
+  font-size: 0;
+  height: 20px;
+  line-height: 20px;
+}
+.mmp-bodyer .left .m-layout .item .time-val span {
+  display: inline-block;
+  font-size: 12px;
+  vertical-align: top;
+  text-indent: 20px;
+  background: url("../image/info-video.png") no-repeat;
+  background-size: 11px 12px;
+  background-position: 0 4px;
+  color: #aaa;
+}
+.mmp-bodyer .left .m-layout .item .time-val span:last-child {
+  background: url("../image/info-video-time.png") no-repeat;
+  background-size: 12px 12px;
+  background-position: 0 4px;
+  margin-left: 15px;
+}
+.mmp-bodyer .right {
+  width: 370px;
+  vertical-align: top;
+  margin-left: 20px;
+  display: inline-block;
+}
+.mmp-bodyer .right >input {
+  width: 370px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #c0c0c0;
+  height: 30px;
+  border-radius: 3px;
+  padding: 0 10px;
+  background: url("../image/basic-search.png") no-repeat;
+  background-position: 98% 6px;
+  display: block;
+}
+.mmp-bodyer .right img {
+  display: block;
+  margin-top: 25px;
+}
+.mmp-bodyer .right .item {
+  border-bottom: 1px solid #e2e2e2;
+  padding: 20px 0;
+  overflow: hidden;
+}
+.mmp-bodyer .right .item .img {
+  float: left;
+  width: 180px;
+  height: 120px;
+}
+.mmp-bodyer .right .item .desc {
+  margin-left: 190px;
+}
+.mmp-bodyer .right .item .desc .stitle {
+  font-size: 20px;
+  line-height: 30px;
+  color: #666467;
+}
+.mmp-bodyer .right .item .desc .time-val {
+  font-size: 0;
+  height: 20px;
+  line-height: 20px;
+  margin-top: 25px;
+}
+.mmp-bodyer .right .item .desc .time-val span {
+  display: inline-block;
+  font-size: 12px;
+  vertical-align: top;
+  text-indent: 20px;
+  background: url("../image/info-video.png") no-repeat;
+  background-size: 11px 12px;
+  background-position: 0 4px;
+  color: #aaa;
+}
+.mmp-bodyer .right .item .desc .time-val span:last-child {
+  background: url("../image/info-video-time.png") no-repeat;
+  background-size: 12px 12px;
+  background-position: 0 4px;
+  margin-left: 15px;
+}
+.m-pagenums {
+  font-size: 0;
+  margin-bottom: 46px;
+  padding: 0 20px;
+  margin-top: 40px;
+}
+.m-pagenums >.btn,
+.m-pagenums >.item {
+  width: 28px;
+  height: 28px;
+  background: #fff;
+  color: #6b6b6b;
+  border-radius: 2px;
+  border: 1px solid #d9d9d9;
+  margin-right: 10px;
+  font-family: "Myriad Pro";
+  font-size: 13px;
+  text-align: center;
+  display: inline-block;
+  line-height: 28px;
+  cursor: pointer;
+}
+.m-pagenums >.item.active,
+.m-pagenums >.item:hover {
+  background: #3e3f45;
+  color: #fff;
+}
+.m-pagenums >.item:nth-child(7) {
+  border: 0;
+  pointer-events: none;
+}
+.m-pagenums >.btn>img {
+  margin-right: -3px;
+  vertical-align: -2px;
+}
+.mmp {
+  -webkit-transform: translateY(-16px);
+      -ms-transform: translateY(-16px);
+          transform: translateY(-16px);
+}
+.y-lr {
+  display: block;
+  margin: 0 auto;
+  width: 1280px;
+  font-size: 0;
+  margin-bottom: 20px;
+}
+.y-lr img {
+  display: inline-block;
+  width: 890px;
+}
+.y-lr img:last-child {
+  width: 370px;
+  margin-left: 20px;
+}

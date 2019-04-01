@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>保密游戏</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/top.css">
+  <link rel="stylesheet" href="./css/userinfo.css">
+  <link rel="stylesheet" href="./css/animate.min.css">
+  <link rel="stylesheet" href="./css/cropper.min.css">
+</head>
+
+<body>
+  <div id="midground" class="wall"></div>
+  <div id="foreground" class="wall"></div>
+  <div class="top">
+    <a href="./mode.html" class="lojump">
+      <div class="logo"></div>
+    </a>
+    <div class="nav">
+      <ul>
+        <li><a href="./shop.html"><img src="./img/prop.png" alt=""></a></li>
+        <li><a href="./ranking.html"><img src="./img/seniority.png" alt=""></a></li>
+        <li><a href="./install.html"><img src="./img/set.png" alt=""></a></li>
+      </ul>
+    </div>
+    <div class="info">
+      <div class="role">
+        <div class="role_info">
+          <div class="identity">
+            <a href="javascrupt:"><img src="./img/role.png" alt="" class="rolg_img"></a>
+            <div class="wrap">
+              <div class="name">用户1<span style="margin-left:8px">LV<span class="counter" style="margin-left:5px">13</span></span></div>
+              <div class="title">游戏称号</div>
+              <div class="progress">
+                <p class="mprocess"></p>
+              </div>
+            </div>
+          </div>
+          <div class="gold">
+            <img src="./img/gold.png" alt="" class="gold_img">
+            <span class="gold_tit">金币</span>
+            <span class="counter gold_num">12589</span>
+          </div>
+        </div>
+        <div class="quit">
+          <a href="./login.html">
+            <span>退出</span>
+            <img src="./img/quit.png" alt="">
+          </a>
+        </div>
+      </div>
+      <div class="task">
+        <ul class="card">
+          <li>
+            <img class=“task_img” src="./img/answer.png" alt="">
+            <span class="task_name">答题卡</span>
+            <span class="num counter">12</span>
+            <a href="./shop.html"> <img src="./img/ladd.png" alt="" class="add_img"></a>
+          </li>
+          <li>
+            <img class=“task_img” src="./img/exclude.png" alt="">
+            <span class="task_name taskc">排除卡</span>
+            <span class="num counter taskc">12</span>
+
+            <a href="./shop.html"><img src="./img/add.png" alt="" class="add_img"></a>
+          </li>
+        </ul>
+        <div class="tips">
+          <ul>
+            <li>
+              <span class="duty">任务</span>
+              <div class="circle"></div>
+              <div class="hwrap">
+                <img src="./img/tips.png" alt="" class="tips_img">
+
+                <ul class="duty_center">
+                  <li class="arr">
+                    <div class="arrow">
+                      <em></em><span></span>
+                    </div>
+                  </li>
+                  <li name="0"><span class="award">使用一次道具</span></li>
+                  <li name="0"><span class="award">使用三次道具</span></li>
+                  <li name="0"><span class="award">赢得一场对战</span></li>
+                  <li name="1"><span class="award">连续赢得两场对战</span></li>
+                  <li name="1"><span class="award">成功进阶1级</span></li>
+                  <li name="0"><span class="award">使用二次道具</span></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+       
+          <div class="shade">
+            <div class="shade_title">奖励：</div>
+            <ul>
+              <li>经验*<span>320</span></li>
+              <li>金币*<span>600</span> </li>
+              <li></li>答题卡*<span>1</span> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 主体部分 -->
+  <div class="userinfo">
+    <img src="./img/means.png" alt="" class="userinfo_tit">
+    <h2>头像</h2>
+    <div class="upload">
+      <img src="./img/upimg.png" alt="" id="finalImg">
+      <div class="upload_img"></div>
+    </div>
+    <div class="user_name">
+      <label for="">昵称</label>
+      <input type="text" placeholder="请输入昵称" class="name_info">
+    </div>
+    <div class="btn">
+      <button class="sure_btn"></button>
+      <button class="back_btn"></button>
+    </div>
+  </div>
+
+  <!-- 弹窗 -->
+  <div id="modal" class="modal">
+    <div class="modal-dialog animated">
+      <div class="lxover"></div>
+      <label title="上传图片" for="chooseImg" class="l-btn choose-btn">
+        <input type="file" accept="image/jpg,image/jpeg,image/png" name="file" id="chooseImg" class="hidden" onchange="selectImg(this)">
+      </label>
+      <div class="seeimg">
+        <div class="imgbox">
+          <img src="./img/upimg.png" alt="" id="tailoringImg">
+        </div>
+        <div class="parcel">
+          <p>图片预览：</p>
+          <div class="circular previewImg"></div>
+        </div>
+      </div>
+      
+      <div class="mbtn">
+        <button class="again" id="sureCut"></button>
+        <button class="leave"></button>
+      </div>
+    </div>
+  </div>
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  <script src="./js/jquery.countup.min.js"></script>
+  <script src="./js/jquery.waypoints.min.js"></script>
+  <script src="./js/cropper.js"></script>
+  <script src="./js/top.js"></script>
+  <script src="./js/modal.js"></script>
+  <script src="./js/alert.js"></script>
+  <script>
+    //图像上传
+    function selectImg(file) {
+      if (!file.files || !file.files[0]) {
+        return;
+      }
+      var reader = new FileReader();
+      reader.onload = function (evt) {
+        var replaceSrc = evt.target.result;
+        //更换cropper的图片
+        $('#tailoringImg').cropper('replace', replaceSrc, false); //默认false，适应高度，不失真
+      }
+      reader.readAsDataURL(file.files[0]);
+    }
+    //cropper图片裁剪
+    $('#tailoringImg').cropper({
+      aspectRatio: 1 / 1, //默认比例
+      preview: '.previewImg', //预览视图
+      guides: false, //裁剪框的虚线(九宫格)
+      autoCropArea: 0.5, //0-1之间的数值，定义自动剪裁区域的大小，默认0.8
+      movable: true, //是否允许移动图片
+      dragCrop: true, //是否允许移除当前的剪裁框，并通过拖动来新建一个剪裁框区域
+      movable: true, //是否允许移动剪裁框
+      resizable: true, //是否允许改变裁剪框的大小
+      zoomable: true, //是否允许缩放图片大小
+      mouseWheelZoom: true, //是否允许通过鼠标滚轮来缩放图片
+      touchDragZoom: true, //是否允许通过触摸移动来缩放图片
+      rotatable: true, //是否允许旋转图片
+      crop: function (e) {
+        // 输出结果数据裁剪图像。   
+      }
+    });
+    //裁剪后的处理
+    $("#sureCut").on("click", function () {
+      if ($("#tailoringImg").attr("src") == null) {
+        return false;
+      } else {
+        var cas = $('#tailoringImg').cropper('getCroppedCanvas'); //获取被裁剪后的canvas
+        var base64url = cas.toDataURL('image/png'); //转换为base64地址形式
+        $("#finalImg").prop("src", base64url); //显示为图片的形式   
+
+        modal.close()
+      }
+    });
+    // 上传
+    $('.upload_img').click(function () {
+      modal.open();
+    })
+    //确定
+    $('.sure_btn').click(function () {
+      if (!$('.name_info').val()) {
+        alerts({
+          title: '个人资料',
+          content: '请输入昵称',
+          time:1300
+        })
+      } else if(!new RegExp("^[a-zA-Z0-9_\u4e00-\u9fa5\\s·]+$").test($('.name_info').val())){
+        alerts({
+          title: '个人资料',
+          content: '昵称不能输入特殊字符',
+          time:1300
+        })
+        $('.name_info').val("")
+      } 
+      else {
+        alerts({
+          title: '个人资料',
+          content: '个人资料修改成功',
+        })
+        setTimeout(function () {
+          window.location = './home.html'
+        }, 1000);
+      
+      }
+
+    })
+    //返回
+    $('.back_btn').click(function () {
+      window.location = './home.html'
+    })
+
+    //裁剪取消
+    $('.leave').click(function () {
+      modal.close()
+    })
+
+    var modal = new RModal(document.getElementById('modal'), {});
+    document.addEventListener('keydown', function (ev) {
+      modal.keydown(ev);
+    }, false);
+
+    window.modal = modal;
+  </script>
+</body>
+
+</html>

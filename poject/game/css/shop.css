@@ -1,0 +1,217 @@
+.shop {
+ background: url('../img/shopbg.png') no-repeat;
+ width: 794px;
+ height: 749px;
+ margin:0 auto;
+ margin-top: 200px;
+ position: relative;
+}
+.shop .shopmall{
+position: absolute;
+left: 40%;
+top: -15px
+}
+.shop .title{
+ text-align: center;
+ padding-top: 84px;
+ color: #7b2b00;
+}
+.shop .title .mtitle{
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 36px;
+}
+.shop .title  .ltitle{
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+.shop .title  .ltitle span{
+  color: #7951bf;
+}
+.shop .tline{
+  width: 720px;
+	height: 1px;
+  background-color: #ffd1b3;
+  margin:0 auto;
+  margin-bottom: 30px;
+}
+.shop  .shop_list{
+ height: 350px;
+ overflow-y: auto;
+  
+}
+.shop  .shop_list li{
+  width: 640px;
+	height: 76px;
+	background-color: #fff4e5;
+	border-radius: 10px;
+  border: solid 2px #b6871a;
+  margin:0 auto 20px;
+  padding: 10px 20px;
+  display: flex;
+}
+.shop_list li .list_img{
+  width: 72px;
+	height: 72px;
+	background-color: #ffedd6;
+	border-radius: 10px;
+  border: solid 1px #b6871a;
+  text-align: center;
+}
+.shop_list li .list_img img{
+ width: 55px;
+ height: 42px;
+ display: inline-block;
+ margin-top: 15px;
+}
+
+.shop_list li  .list_info{
+  width: 358px;
+	height: 72px;
+	background-color: #ffedd6;
+	border-radius: 10px;
+  border: solid 1px #b6871a;
+  margin: 0 30px;
+  padding: 10px;
+  color: #7b2b00;
+}
+.shop_list li  .list_info h2{
+  font-size: 18px;
+}
+.shop_list li  .list_info .list_infom{
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-top: 8px;
+}
+.shop .list_price {
+  color: #7b2b00;
+  flex: 1
+}
+.shop .list_price .price{
+  display: flex;
+  justify-content: flex-end
+}
+
+.shop .list_price .price span{
+ font-weight: bold;
+ margin-right: 5px;
+  font-size: 20px;
+}
+
+.shop .list_price .price img{
+  margin-top: 5px;
+  height: 16px;
+}
+.shop .list_price .buy{
+  display: flex;
+  margin-top: 10px;
+}
+.shop .list_price .buy .buy_num{
+  width: 81px;
+	height: 32px;
+	background-image: linear-gradient(90deg, 
+		#ffedd6 0%, 
+		#ffe2bd 100%), 
+	linear-gradient(
+		#fbae29, 
+		#fbae29);
+	background-blend-mode: normal, 
+		normal;
+	box-shadow: 0px -1px 3px 0px 
+		rgba(255, 176, 57, 0.35), 
+		inset 0px -2px 1px 0px 
+		#fae49b;
+  border: solid 1px #b6871a;
+  border-radius:10px;
+  text-align: center;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: bold;
+  margin-left: 5px;
+  margin-right: 5px; 
+}
+.shop .list_price .buy img{
+ cursor: pointer;
+}
+
+.shop .btn_list{
+  text-align: center;
+  margin-top: 30px;
+}
+.shop .btn_list button{
+width: 228px;
+height: 66px;
+outline: none;
+cursor: pointer;
+border: none;
+}
+.shop .btn_list .buy_btn{
+margin-right: 90px;
+background: url('../img/buy.png') no-repeat
+}
+.shop .btn_list .back_btn{
+  background: url('../img/sback.png') no-repeat
+}
+.alert{
+  display: none;
+    background: rgba(0,0,0,.3);
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.alert .layc-alert{
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1000;
+  width: 320px;
+  height: 280px;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  box-sizing: border-box;
+  color: #484848;
+  background: url(../img/toast.png) no-repeat 100% 100%;
+  background-size:contain;
+  color: #7b2b00;
+}
+.alert .layc-alert h2{
+  font-size: 30px;
+  margin-top: 20px;
+}
+.alert .layc-alert .atitle{
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.alert .layc-alert .all {
+  margin-bottom: 5px;
+}
+.alert .layc-alert .all span{
+ font-weight: bold
+}
+.alert .layc-alert .alert_btn button{
+  width: 228px;
+  height: 66px;
+  display: block;
+  outline: none;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+}
+.alert .layc-alert .alert_btn .rbuy{
+  background: url('../img/rbuy.png') no-repeat;
+  margin-bottom: 10px;
+
+
+}
+.alert .layc-alert .alert_btn .renounce{
+  background: url('../img/renounce.png') no-repeat
+
+}

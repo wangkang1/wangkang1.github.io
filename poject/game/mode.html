@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>保密游戏</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/top.css">
+  <link rel="stylesheet" href="./css/mode.css">
+</head>
+
+<body>
+  <div id="midground" class="wall"></div>
+  <div id="foreground" class="wall"></div>
+  <audio  loop="loop" id="music" autoplay>
+    <source src="./mp3/Wild Child - Crazy Bird.mp3" ></audio>
+  <div class="top">
+    <a href="javascript:" class="lojump">
+      <div class="logo"></div>
+    </a>
+    <div class="nav">
+      <ul>
+        <li><a href="./shop.html"><img src="./img/prop.png" alt=""></a></li>
+        <li><a href="./ranking.html"><img src="./img/seniority.png" alt=""></a></li>
+        <li><a href="./install.html"><img src="./img/set.png" alt=""></a></li>
+    </div>
+    <div class="info">
+      <div class="role">
+        <div class="role_info">
+          <div class="identity">
+            <a href="./userinfo.html"><img src="./img/role.png" alt="" class="rolg_img"></a>
+            <div class="wrap">
+              <div class="name">用户1<span style="margin-left:8px">LV<span class="counter" style="margin-left:5px">13</span></span></div>
+              <div class="title">游戏称号</div>
+              <div class="progress">
+                <p class="mprocess"></p>
+              </div>
+            </div>
+          </div>
+          <div class="gold">
+            <img src="./img/gold.png" alt="" class="gold_img">
+            <span class="gold_tit">金币</span>
+            <span class="counter gold_num">12589</span>
+          </div>
+        </div>
+        <div class="quit">
+          <a href="./login.html">
+            <span>退出</span>
+            <img src="./img/quit.png" alt="">
+          </a>
+        </div>
+      </div>
+      <div class="task">
+        <ul class="card">
+          <li>
+            <img class=“task_img” src="./img/answer.png" alt="">
+            <span class="task_name">答题卡</span>
+            <span class="num counter">12</span>
+            <a href="./shop.html"> <img src="./img/ladd.png" alt="" class="add_img"></a>
+          </li>
+          <li>
+            <img class=“task_img” src="./img/exclude.png" alt="">
+            <span class="task_name taskc">排除卡</span>
+            <span class="num counter taskc">12</span>
+
+            <a href="./shop.html"><img src="./img/add.png" alt="" class="add_img"></a>
+          </li>
+        </ul>
+        <div class="tips">
+          <ul>
+            <li>
+              <span class="duty">任务</span>
+              <div class="circle"></div>
+              <div class="hwrap">
+                <img src="./img/tips.png" alt="" class="tips_img">
+
+                <ul class="duty_center">
+                  <li class="arr">
+                    <div class="arrow">
+                      <em></em><span></span>
+                    </div>
+                  </li>
+                  <li name="0"><span class="award">使用一次道具</span></li>
+                  <li name="0"><span class="award">使用三次道具</span></li>
+                  <li name="0"><span class="award">赢得一场对战</span></li>
+                  <li name="1"><span class="award">连续赢得两场对战</span></li>
+                  <li name="1"><span class="award">成功进阶1级</span></li>
+                  <li name="0"><span class="award">使用二次道具</span></li>
+                </ul>
+
+            </li>
+          </ul>
+          <div class="shade">
+            <div class="shade_title">奖励：</div>
+            <ul>
+              <li>经验*<span>320</span></li>
+              <li>金币*<span>600</span> </li>
+              <li></li>答题卡*<span>1</span> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- 主体部分 -->
+  <div class="mode">
+    <div class="mode_list">
+      <div class="close">
+        <img class="mode_img" src="./img/lx.png" alt="">
+        <p class="mode_tit">
+          练习模式即单机模式，玩家可以在此模式下多练习题目以此来增加题目的熟练度，每题答完后，系统会自动显示正确答案。
+        </p>
+      </div>
+      <div class="open">
+        <img class="mode_open" src="./img/lx.png" alt="">
+        <p class="mode_tit">
+          练习模式即单机模式，玩家可以在此模式下多练习题目以此来增加题目的熟练度，每题答完后，系统会自动显示正确答案。
+        </p>
+        <from>
+          <div class="change_list">
+            <input name="0" type="radio" value="0" /><label>新手题目 </label>
+          </div>
+          <div class="change_list">
+            <input name="0" type="radio" value="1" /><label>先锋题目 </label>
+          </div>
+          <div class="change_list">
+            <input name="0" type="radio" value="2" /><label>达人题目 </label>
+          </div>
+          <div class="change_list">
+            <input name="0" type="radio" value="3" /><label>大神题目 </label>
+          </div>
+        </from>
+      </div>
+    </div>
+    <div class="mode_list">
+      <div class="close">
+        <img class="mode_img" src="./img/dz.png" alt="">
+        <p class="mode_tit">
+          对战模式指玩家匹配成功后进行1V1的答题对战，在限定时间内答题率高的玩家获胜。
+        </p>
+      </div>
+      <div class="open" style=" margin-top: 100px;">
+        <img class="mode_open" src="./img/dz.png" alt="">
+        <p class="mode_tit">
+          对战模式指玩家匹配成功后进行1V1的答题对战，在限定时间内答题率高的玩家获胜。
+        </p>
+        <from>
+          <div class="change_list">
+            <input name="0" type="radio" value="对战" /><label>1V1模式 </label>
+          </div>
+        </from>
+      </div>
+    </div>
+    <div class="mode_list">
+      <div class="close">
+        <img class="mode_img" src="./img/jinj.png" alt="">
+        <p class="mode_tit">当玩家当前等级满经验值时，若想升级必须回答当前等级的进阶题目，正确率达到时，进阶成功。</p>
+      </div>
+      <div class="open" style=" position: relative;">
+        <img class="mode_open" src="./img/jinj.png" alt="">
+        <p class="mode_tit">
+          当玩家当前等级满经验值时，若想升级必须回答当前等级的进阶题目，正确率达到时，进阶成功。
+        </p>
+        <from>
+          <div class="change_list">
+            <div class="change_list">
+              <input name="0" type="radio" value="0" /><label>一级进阶 </label>
+            </div>
+            <div class="change_list">
+              <input name="0" type="radio" value="1" /><label>二级进阶 </label>
+            </div>
+            <div class="change_list">
+              <div class="lock">
+                <img src="./img/lock.png" alt="" class="lock_img"><label>三级进阶 </label>
+              </div>
+              <div class="radio_state"> <input name="0" type="radio" value="" /><label>三级进阶 </label></div>
+            </div>
+            <div class="change_list">
+              <div class="lock">
+                <img src="./img/lock.png" class="lock_img" alt=""><label>四级进阶</label>
+              </div>
+              <div class="radio_state"><input name="0" type="radio" value="" /><label>四级进阶 </label></div>
+            </div>
+          </div>
+        </from>
+        <div class="prompt">解锁条件：百分之九十的正确率通过下个进阶</div>
+      </div>
+    </div>
+
+  </div>
+  <div class="btn_list">
+    <button class="start"></button>
+    <button class="back"></button>
+  </div>
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  <script src="./js/jquery.countup.min.js"></script>
+  <script src="./js/jquery.waypoints.min.js"></script>
+  <script src="./js/alert.js"></script>
+  <script src="./js/top.js"></script>
+  <script>
+    var change = ""
+    if(localStorage.getItem('advanced')=="true"){
+      alerts({
+          title: '提示',
+          content: '已选择对战模式,重新选择请退出匹配',
+          time: 2200
+        })
+        setTimeout(function(){
+          localStorage.setItem('mode','1')
+          window.location = './home.html'
+        },2200)
+       
+    }
+    var mode = localStorage.getItem('mode');
+    $('.close').eq(mode).hide();
+    $('.open').eq(mode).show()
+    $('.mode_list').eq(mode).css("background-image", "url(./img/open.png)");
+
+    // 背景音乐状态控制
+    if (localStorage.getItem('control') == "false") {
+      $('#music')[0].autoplay = false
+    } else {
+      $('#music')[0].autoplay = true
+    }
+    
+    //切换模式
+    $('.close').click(function(){
+      var  index=$('.close').index(this);
+      localStorage.setItem('mode',index)
+      $('.mode_list').each(function(inde){
+        $('.open').eq(inde).hide(300)
+         $('.close').eq(inde).show(300)
+        $('.mode_list').eq(inde).css("background-image", "url(./img/mode.png)");
+      })
+      $(this).hide(300)
+        $('.mode_list').eq(index).css("background-image", "url(./img/open.png)");
+        $('.open').eq(index).show(300)
+
+    })
+
+    // 解锁提示框
+    $('.lock_img').mousemove(function () {
+      $('.prompt').show(300)
+    })
+    $('.lock_img').mouseleave(function () {
+      $('.prompt').hide(300)
+    })
+    //返回
+    $('.back').click(function () {
+      window.history.go(-1);
+    })
+    //选择模式
+    $('.change_list input').change(function () {
+      change = $(this).val();
+    })
+    //  开始游戏
+    $('.start').click(function () {
+      if (!change) {
+        alerts({
+          title: '提示',
+          content: '请先选择一种模式！',
+          time: 2000
+        })
+      } else {
+        localStorage.removeItem('timers')
+        localStorage.removeItem('lnum')
+        localStorage.removeItem('lnums')
+        if (change == "对战") {
+          localStorage.setItem('advanced', "true")
+          localStorage.removeItem('marryt')
+          localStorage.removeItem('marrys')
+          window.location = './home.html'
+        } else {
+          //  window.open('./answer.html', 'big', 'fullscreen=yes')
+          window.location = './answer.html'
+        }
+
+      }
+    })
+  </script>
+</body>
+
+</html>

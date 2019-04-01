@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>保密游戏</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/top.css">
+  <link rel="stylesheet" href="./css/install.css">
+</head>
+
+<body>
+  <div id="midground" class="wall"></div>
+  <div id="foreground" class="wall"></div>
+  <div class="top">
+    <a href="./mode.html" class="lojump">
+      <div class="logo"></div>
+    </a>
+    <div class="nav">
+      <ul>
+        <li><a href="./shop.html"><img src="./img/prop.png" alt=""></a></li>
+        <li><a href="./ranking.html"><img src="./img/seniority.png" alt=""></a></li>
+        <li><a href="javascript:"><img src="./img/set.png" alt=""></a></li>
+    </div>
+    <div class="info">
+      <div class="role">
+        <div class="role_info">
+          <div class="identity">
+              <a href="./userinfo.html"><img src="./img/role.png" alt="" class="rolg_img"></a>
+            <div class="wrap">
+              <div class="name">用户1<span style="margin-left:8px">LV<span class="counter" style="margin-left:5px">13</span></span></div>
+              <div class="title">游戏称号</div>
+              <div class="progress">
+                <p class="mprocess"></p>
+              </div>
+            </div>
+          </div>
+          <div class="gold">
+            <img src="./img/gold.png" alt="" class="gold_img">
+            <span class="gold_tit">金币</span>
+            <span class="counter gold_num">12589</span>
+          </div>
+        </div>
+        <div class="quit">
+          <a href="./login.html">
+            <span>退出</span>
+            <img src="./img/quit.png" alt="">
+          </a>
+        </div>
+      </div>
+      <div class="task">
+        <ul class="card">
+          <li>
+            <img class=“task_img” src="./img/answer.png" alt="">
+            <span class="task_name">答题卡</span>
+            <span class="num counter">12</span>
+            <a href="./shop.html"> <img src="./img/ladd.png" alt="" class="add_img"></a>
+          </li>
+          <li>
+            <img class=“task_img” src="./img/exclude.png" alt="">
+            <span class="task_name taskc">排除卡</span>
+            <span class="num counter taskc">12</span>
+
+            <a href="./shop.html"><img src="./img/add.png" alt="" class="add_img"></a>
+          </li>
+        </ul>
+        <div class="tips">
+          <ul>
+            <li>
+              <span class="duty">任务</span>
+              <div class="circle"></div>
+              <div class="hwrap">
+                <img src="./img/tips.png" alt="" class="tips_img">
+
+                <ul class="duty_center">
+                  <li class="arr">
+                    <div class="arrow">
+                      <em></em><span></span>
+                    </div>
+                  </li>
+                  <li name="0"><span class="award">使用一次道具</span></li>
+                  <li name="0"><span class="award">使用三次道具</span></li>
+                  <li name="0"><span class="award">赢得一场对战</span></li>
+                  <li name="1"><span class="award">连续赢得两场对战</span></li>
+                  <li name="1"><span class="award">成功进阶1级</span></li>
+                  <li name="0"><span class="award">使用二次道具</span></li>
+                </ul>
+
+            </li>
+          </ul>
+          <div class="shade">
+            <div class="shade_title">奖励：</div>
+            <ul>
+              <li>经验*<span>320</span></li>
+              <li>金币*<span>600</span> </li>
+              <li></li>答题卡*<span>1</span> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 主体部分 -->
+   <div class="install">
+      <img src="./img/install.png" alt="" class="install_tit">
+      <h2>游戏音效</h2>
+      <div class="line"></div>
+      <form>
+          <div class="install_list">
+              <input name="0" type="radio" value="0"  class="change"/><label>开 </label>
+            </div>
+            <div class="install_list">
+              <input name="0" type="radio" value="1" class="change" /><label>关 </label>
+            </div>
+      </form>
+      <div class="btn">
+        <button class="sure_btn"></button>
+        <button class="back_btn"></button>
+      </div>
+   </div>
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  <script src="./js/jquery.countup.min.js"></script>
+  <script src="./js/jquery.waypoints.min.js"></script>
+  <script src="./js/top.js"></script>
+  <script src="./js/alert.js"></script>
+  <script>
+    var  state=""
+    if(localStorage.getItem('control')=="false"){
+      $('.change').eq(1).attr("checked","checked");
+  }
+  else{
+    $('.change').eq(0).attr("checked","checked");
+  }
+    //切换开关
+    $('.change').click(function(){
+      state=$(this).val()
+    })
+    //确定
+    $('.sure_btn').click(function(){
+      if(state==1){
+        alerts({
+          title: '游戏音效',
+          content: '游戏音效已关闭',
+        })
+        localStorage.setItem('control',false)
+      }
+      else{
+        alerts({
+          title: '游戏音效',
+          content: '游戏音效已开启',
+        })
+        localStorage.setItem('control',true)
+      }
+     
+    })
+   //返回
+    $('.back_btn').click(function(){
+      window.location = './home.html'
+    })
+  </script>
+</body>
+
+</html>
